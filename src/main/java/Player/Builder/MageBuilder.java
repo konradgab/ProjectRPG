@@ -1,0 +1,62 @@
+package Player.Builder;
+
+import Abilities.Ability;
+import Player.PlayerMage;
+import lombok.Getter;
+import lombok.var;
+
+import java.util.List;
+
+@Getter
+public class MageBuilder implements Builder {
+    PlayerMage product;
+
+    public MageBuilder() {
+        this.reset();
+    }
+
+    @Override
+    public void reset() {
+        this.product = new PlayerMage();
+    }
+
+    @Override
+    public void setHealth(float value) {
+        product.setHealth(value);
+        product.setCurrentHealth(value);
+    }
+
+    @Override
+    public void setMana(float value) {
+        product.setMana(value);
+        product.setCurrentMana(value);
+
+    }
+
+    @Override
+    public void setExperience(int value) {
+        product.setExperience(value);
+    }
+
+    @Override
+    public void setArmor(int value) {
+        product.setArmor(value);
+    }
+
+    @Override
+    public void setLevel(int value) {
+        product.setLevel(value);
+    }
+
+    @Override
+    public void setName(String name) {
+        product.setName(name);
+    }
+
+    @Override
+    public void setAbilities(List<Ability> abilities) {
+        product.setAbilities(abilities);
+    }
+
+
+}
