@@ -7,8 +7,9 @@ import java.util.List;
 
 public class Boss extends Enemy implements Fightable {
 
-    public Boss(String name, float health, float mana, int armor, float currentHealth, float currentMana, List<Ability> Abilities) {
-        super(name, health, mana, armor, currentHealth, currentMana, Abilities);
+
+    public Boss(String name, float health, float mana, int armor, float currentHealth, float currentMana, List<Ability> Abilities, List<String> dialogues) {
+        super(name, health, mana, armor, currentHealth, currentMana, Abilities, dialogues);
     }
 
     @Override

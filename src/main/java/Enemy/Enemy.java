@@ -18,6 +18,7 @@ public abstract class Enemy {
     private float currentHealth;
     private float currentMana;
     List<Ability> Abilities;
+    List<String> dialogues;
 
 
 }

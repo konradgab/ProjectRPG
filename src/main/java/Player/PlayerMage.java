@@ -21,6 +21,11 @@ public class PlayerMage extends Player implements Fightable {
     }
 
     @Override
+    public boolean fight(Fightable player) {
+        return true;
+    }
+
+    @Override
     public int getMainAttribute() {
         return (int) this.getMana();
     }
