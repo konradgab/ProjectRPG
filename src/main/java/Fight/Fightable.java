@@ -19,5 +19,4 @@ public interface Fightable {
 
     public float basicAttack();
 
-    public boolean fight (Fightable player);
 }

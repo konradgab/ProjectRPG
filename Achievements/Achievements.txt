@@ -18,3 +18,5 @@
 [2020-12-14]Player created hero: Konrad
 [2020-12-14]Player created hero: Konrad
 [2020-12-14]Player created hero: Konrad
+[2020-12-15]Player created hero: Konrad
+[2020-12-15]Player created hero: Konrad

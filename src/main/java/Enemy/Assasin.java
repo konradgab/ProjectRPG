@@ -3,11 +3,11 @@ package Enemy;
 import Abilities.Ability;
 import Fight.FightManager;
 import Fight.Fightable;
-import Fight.FightableAssasin;
+import Fight.FightableAssassin;
 
 import java.util.List;
 
-public class Assasin extends Enemy implements FightableAssasin {
+public class Assasin extends Enemy implements FightableAssassin {
 
 
     public Assasin(String name, float health, float mana, int armor, float currentHealth, float currentMana, List<Ability> Abilities, List<String> dialogues) {
@@ -31,12 +31,12 @@ public class Assasin extends Enemy implements FightableAssasin {
     }
 
     @Override
-    public boolean fight(Fightable player) {
-        return FightManager.fightPlayerVsAssasin(player, this);
+    public List<String> getDialoguesList() {
+        return this.dialogues;
     }
 
     @Override
-    public List<String> getDialoguesList() {
-        return this.dialogues;
+    public boolean fight(Fightable player, FightManager fightManager) {
+        return false;
     }
 }

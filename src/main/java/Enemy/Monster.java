@@ -3,12 +3,13 @@ package Enemy;
 import Abilities.Ability;
 import Fight.FightManager;
 import Fight.Fightable;
+import Fight.FightableEnemy;
 import lombok.Getter;
 
 import java.util.List;
 
 @Getter
-public class Monster extends Enemy implements Fightable {
+public class Monster extends Enemy implements FightableEnemy {
 
 
     public Monster(String name, float health, float mana, int armor, float currentHealth, float currentMana, List<Ability> Abilities, List<String> dialogues) {
@@ -28,8 +29,8 @@ public class Monster extends Enemy implements Fightable {
     }
 
     @Override
-    public boolean fight(Fightable player) {
-        return FightManager.fightPlayerVsEnemy(player, this);
+    public boolean fight(Fightable player, FightManager fightManager) {
+        return fightManager.fightPlayerVsEnemy(player, this);
     }
 
     @Override

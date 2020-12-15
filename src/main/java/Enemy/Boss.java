@@ -1,11 +1,13 @@
 package Enemy;
 
 import Abilities.Ability;
+import Fight.FightManager;
 import Fight.Fightable;
+import Fight.FightableEnemy;
 
 import java.util.List;
 
-public class Boss extends Enemy implements Fightable {
+public class Boss extends Enemy implements FightableEnemy {
 
 
     public Boss(String name, float health, float mana, int armor, float currentHealth, float currentMana, List<Ability> Abilities, List<String> dialogues) {
@@ -28,7 +30,7 @@ public class Boss extends Enemy implements Fightable {
     }
 
     @Override
-    public boolean fight(Fightable player) {
-        return false;
+    public boolean fight(Fightable player, FightManager fightManager) {
+        return fightManager.fightPlayerVsBoss(player, this);
     }
 }

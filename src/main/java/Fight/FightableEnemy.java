@@ -1,2 +1,5 @@
-package Fight;public interface FightAbleEnemy {
+package Fight;
+
+public interface FightableEnemy extends Fightable{
+    public boolean fight (Fightable player, FightManager fightManager);
 }

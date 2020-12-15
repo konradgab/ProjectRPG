@@ -3,7 +3,6 @@ package Player.Builder;
 import Abilities.Ability;
 import Player.PlayerMage;
 import lombok.Getter;
-import lombok.var;
 
 import java.util.List;
 
