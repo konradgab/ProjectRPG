@@ -1,0 +1,43 @@
+- type: "boss"
+  mapLevel: 2
+  name: "Gates of Hell"
+  description: "Run fools!"
+  actions:
+    - type: "card"
+    - type: "fight"
+      entity:
+        name: "Werewolf"
+        health: 90
+        baseStrength: 25
+      reward: 100
+    - type: "coach"
+      name: "Bard"
+      price: 10.0
+      multiplier: 1.5
+  boss:
+    name: "Lord of the Abyss"
+    health: 1500
+    baseStrength: 120
+    multiplier: 1.2
+
+- type: "boss"
+  mapLevel: 2
+  name: "Behemoth lair"
+  description: "This furry must die!"
+  actions:
+    - type: "card"
+    - type: "fight"
+      entity:
+        name: "Werewolf"
+        health: 90
+        baseStrength: 25
+      reward: 100
+    - type: "coach"
+      name: "Bard"
+      price: 10.0
+      multiplier: 1.5
+  boss:
+    name: "Behemoth"
+    health: 1400
+    baseStrength: 120
+    multiplier: 1.25

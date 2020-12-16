@@ -1,0 +1,366 @@
+- type: "item"
+  name: "Ice Sword"
+  carriable: true
+  description: "Sword from the highest mountain. "
+  strength: 10
+  itemValue: 100
+  profession: "pl.grsrpg.player.PlayerWarrior"
+
+- type: "item"
+  name: "Black Cleaver"
+  carriable: true
+  description: "This axe can slash everything."
+  strength: 15
+  itemValue: 250
+  profession: "pl.grsrpg.player.PlayerWarrior"
+
+- type: "item"
+  name: "Mjølner"
+  carriable: true
+  description: "This hammer was worn by Thorn."
+  strength: 30
+  itemValue: 1000
+  profession: "pl.grsrpg.player.PlayerWarrior"
+
+- type: "item"
+  name: "Achilles Shield"
+  carriable: true
+  description: "The Earth, sky and sea, the sun, the moon and the constellations."
+  strength: 1
+  armor: 25
+  itemValue: 15
+  profession: "pl.grsrpg.player.PlayerWarrior"
+
+- type: "item"
+  name: "Warmog armor"
+  carriable: true
+  description: "The living armor protected the greatest troll warrior."
+  strength: 1
+  armor: 80
+  itemValue: 250
+  profession: "pl.grsrpg.player.PlayerWarrior"
+
+- type: "item"
+  name: "Spirit Visage"
+  carriable: true
+  description: "A gift from kind specters."
+  magicPoints: 10
+  armor: 50
+  itemValue: 250
+  profession: "pl.grsrpg.player.PlayerMage"
+
+- type: "item"
+  name: "Undying armor"
+  carriable: true
+  description: "Sometimes the dead can give life."
+  magicPoints: 2
+  armor: 40
+  itemValue: 500
+  profession: "pl.grsrpg.player.PlayerMage"
+
+- type: "item"
+  name: "Archangel's Staff"
+  carriable: true
+  description: "This item comes from sky."
+  magicPoints: 3
+  armor: 20
+  itemValue: 45
+  profession: "pl.grsrpg.player.PlayerMage"
+
+- type: "item"
+  name: "Guardian Angel"
+  carriable: true
+  description: "That is your personal guard."
+  magicPoints: 5
+  armor: 20
+  itemValue: 40
+  profession: "pl.grsrpg.player.PlayerMage"
+
+- type: "item"
+  name: "Ninja Boots"
+  carriable: true
+  description: "Very fast boots."
+  strength: 1
+  armor: 5
+  agility: 20
+  itemValue: 50
+  profession: "pl.grsrpg.player.PlayerScout"
+
+- type: "item"
+  name: "Slightly Magical Boots"
+  carriable: true
+  description: "."
+  strength: 1
+  armor: 10
+  agility: 25
+  itemValue: 55
+  profession: "pl.grsrpg.player.PlayerScout"
+
+- type: "item"
+  name: "Elegant shoes"
+  carriable: true
+  description: "You will make any girl in these shoes."
+  strength: 2
+  armor: 5
+  agility: 2
+  magicPoints: 2
+  itemValue: 30
+
+- type: "item"
+  name: "Hera's ring"
+  carriable: true
+  description: "This was Hera's favourite ring."
+  magicPoints: 3
+  itemValue: 300
+
+- type: "item"
+  name: "Beautiful necklace"
+  carriable: true
+  description: "It is beautiful but also useless."
+  itemValue: 500
+
+- type: "item"
+  name: "Thieves guild sign"
+  carriable: true
+  description: "Mark of belonging to the thieves guild."
+  agility: 5
+  itemValue: 50
+
+- type: "item"
+  name: "Thor guild sign"
+  carriable: true
+  description: "Mark of belonging to the Thor's army."
+  strength: 5
+  itemValue: 50
+
+- type: "item"
+  name: "Mage guild sign"
+  carriable: true
+  description: "Mark of belonging to the mage tower."
+  magicPoints: 3
+  armor: 5
+  itemValue: 50
+
+- type: "item"
+  name: "Camouflage cape"
+  carriable: true
+  description: "Wow. Were you still here?"
+  magicPoints: 1
+  agility: 1
+  strength: 1
+  armor: 15
+  itemValue: 50
+
+- type: "item"
+  name: "Konrad's ring"
+  carriable: true
+  description: "You are very lucky."
+  magicPoints: 5
+  agility: 5
+  strength: 5
+  armor: 10
+  itemValue: 50
+
+- type: "item"
+  name: "Jedrzej's backpack"
+  carriable: true
+  description: "Now you can win every debate."
+  magicPoints: 5
+  agility: 5
+  strength: 5
+  armor: 10
+  itemValue: 50
+
+- type: "item"
+  name: "Suhutki's boots"
+  carriable: true
+  description: "Beautiful nike shoes."
+  magicPoints: 5
+  agility: 5
+  strength: 5
+  armor: 10
+  itemValue: 50
+
+- type: "item"
+  name: "Fire arrows"
+  carriable: true
+  description: "Be careful, it's on fire."
+  agility: 15
+  strength: 1
+  armor: 3
+  itemValue: 50
+  profession: "pl.grsrpg.player.PlayerScout"
+
+- type: "item"
+  name: "Black edge"
+  carriable: true
+  description: "This edge is darker than black."
+  magicPoints: 5
+  agility: 5
+  strength: 10
+  itemValue: 505
+  profession: "pl.grsrpg.player.PlayerWarrior"
+
+- type: "item"
+  name: "Boots of Mobility"
+  carriable: true
+  description: "Legends say that Hermes lost these boots."
+  strength: 1
+  armor: 1
+  agility: 30
+  itemValue: 60
+  profession: "pl.grsrpg.player.PlayerScout"
+
+
+- type: "item"
+  name: "Gold"
+  carriable: false
+  description: "100 gold"
+  gold: 100
+
+- type: "item"
+  name: "Gold"
+  carriable: false
+  description: "250 gold"
+  gold: 250
+
+- type: "item"
+  name: "Gold"
+  carriable: false
+  description: "500 gold"
+  gold: 500
+
+- type: "friend"
+  name: "Donkey"
+  description: "Your most loyal friend. He can carry equipment"
+  capacity: 10
+
+- type: "friend"
+  name: "Donkey with bags"
+  description: "Your friend can carry more equipment"
+  capacity: 30
+
+- type: "friend"
+  name: "Lucky Man"
+  description: "Your friend add one point during draw"
+  addPoint: true
+
+- type: "friend"
+  name: "Companion"
+  description: "Your friend add one point during draw"
+  addPoint: true
+
+- type: "friend"
+  name: "Beginner Advisor"
+  description: "Your friend know how increase your reward"
+  multiplierGold: 1.1
+
+- type: "friend"
+  name: "Experienced Advisor"
+  description: "Your friend know how increase your reward"
+  multiplierGold: 1.5
+
+- type: "friend"
+  name: "Market Master"
+  description: "Your friend is the best gold advisor"
+  multiplierGold: 2.0
+
+- type: "enemy"
+  enemy:
+    name: "Wolf"
+    health: 40
+    baseStrength: 20
+  reward: 10
+
+- type: "enemy"
+  enemy:
+    name: "Werewolf"
+    health: 50
+    baseStrength: 25
+  reward: 25
+
+- type: "enemy"
+  enemy:
+    name: "Lesser Wolf"
+    health: 30
+    baseStrength: 15
+  reward: 5
+
+- type: "enemy"
+  enemy:
+    name: "Lesser Wraith"
+    health: 40
+    baseStrength: 30
+  reward: 15
+
+- type: "enemy"
+  enemy:
+    name: "Wraith"
+    health: 60
+    baseStrength: 30
+  reward: 50
+
+- type: "enemy"
+  enemy:
+    name: "Strong Wraith"
+    health: 80
+    baseStrength: 40
+  reward: 100
+
+- type: "enemy"
+  enemy:
+    name: "Raptor"
+    health: 60
+    baseStrength: 40
+  reward: 60
+
+- type: "enemy"
+  enemy:
+    name: "Giant Raptor"
+    health: 90
+    baseStrength: 40
+  reward: 150
+
+- type: "enemy"
+  enemy:
+    name: "Blue Sentinel"
+    health: 30
+    baseStrength: 20
+  reward: 15
+
+
+- type: "enemy"
+  enemy:
+    name: "Red Brambleback"
+    health: 30
+    baseStrength: 10
+  reward: 20
+
+
+- type: "enemy"
+  enemy:
+    name: "Gromp"
+    health: 50
+    baseStrength: 20
+  reward: 35
+
+- type: "enemy"
+  enemy:
+    name: "Rift Scuttler"
+    health: 65
+    baseStrength: 30
+  reward: 40
+
+- type: "enemy"
+  enemy:
+    name: "Lesser Rift Scuttler"
+    health: 45
+    baseStrength: 25
+  reward: 25
+
+- type: "enemy"
+  enemy:
+    name: "Dragon"
+    health: 100
+    baseStrength: 60
+  reward: 250

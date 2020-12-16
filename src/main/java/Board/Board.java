@@ -19,10 +19,12 @@ public class Board implements IBoard {
     private String name;
     @JsonProperty
     private final List<IField> Fields = new ArrayList<>();
+    @JsonProperty
     private Player player;
 
     public Board() {
         loadLevel(Fields, "data/level-1-field-common.yml", "level-1-field-common.yml", Game.getConfig().getBoardSize());
+        this.name = Game.getConfig().getLandName();
     }
 
     private void loadLevel(List<IField> levelList, String levelFileName, String resource, int size) {
@@ -34,7 +36,6 @@ public class Board implements IBoard {
                 Logger.Logger.printError("Expected "+(size-1)+" fields but defined in "+levelFileName+" only "+gameFields.size()+".");
                 System.exit(1);
             }
-            Collections.shuffle(gameFields);
             levelList.addAll(gameFields.subList(0, size - 1));
         } catch (IOException e) {
             e.printStackTrace();
