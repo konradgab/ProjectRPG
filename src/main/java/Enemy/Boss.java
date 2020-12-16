@@ -10,8 +10,8 @@ import java.util.List;
 public class Boss extends Enemy implements FightableEnemy {
 
 
-    public Boss(String name, float health, float mana, int armor, float currentHealth, float currentMana, List<Ability> Abilities, List<String> dialogues) {
-        super(name, health, mana, armor, currentHealth, currentMana, Abilities, dialogues);
+    public Boss(String name, int level, float health, float mana, int armor, float currentHealth, float currentMana, List<Ability> Abilities, List<String> dialogues) {
+        super(name, level, health, mana, armor, currentHealth, currentMana, Abilities, dialogues);
     }
 
     @Override
@@ -26,6 +26,11 @@ public class Boss extends Enemy implements FightableEnemy {
 
     @Override
     public float basicAttack() {
+        return 0;
+    }
+
+    @Override
+    public int getLevel() {
         return 0;
     }
 

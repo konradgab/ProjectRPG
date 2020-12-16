@@ -1,5 +1,8 @@
 package Player;
 import Abilities.Ability;
+import EventManager.PlayerEventManager;
+import Fight.Fightable;
+import Utils.IOUtils;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -7,7 +10,8 @@ import java.util.List;
 
 @Setter
 @Getter
-public abstract class Player {
+public abstract class Player implements Fightable {
+    PlayerEventManager eventManager = new PlayerEventManager("level up");
     String name;
     private int level;
     private float health;
@@ -56,14 +60,39 @@ public abstract class Player {
     }
 
 
+    public void addExp(int exp) {
+        int currentExperience = getExperience() + exp;
+        if(currentExperience >= 100*getLevel()) {
+            setExperience(getExperience() + exp - 100*getLevel());
+            setLevel(getLevel() + 1);
+            eventManager.notify("level up", this);
+        } else {
+            setExperience(currentExperience);
+        }
+    }
+
+    public void levelUp() {
+        System.out.println("You advanced from level + " + this.getLevel() + " to level " + this.getLevel() );
+        System.out.println("Which attribute do you want to improve: ");
+        System.out.println("1. Health.");
+        System.out.println("2. Mana.");
+        int choice = IOUtils.nextInt();
+        switch (choice) {
+            case 1:
+                setHealth(getHealth() + 5);
+                restore();
+                break;
+            case 2:
+                setMana(getMana() + 5);
+                restore();
+        }
+    }
+
+
     public void restore() {
         this.setCurrentMana(this.getMana());
         this.setCurrentHealth(this.getHealth());
     }
-
-
-
-
 
 
 }

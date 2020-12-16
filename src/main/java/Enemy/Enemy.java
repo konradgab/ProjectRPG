@@ -12,6 +12,7 @@ import java.util.List;
 @AllArgsConstructor
 public abstract class Enemy {
     String name;
+    int level;
     private float health;
     private float mana;
     private int armor;

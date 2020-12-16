@@ -19,4 +19,6 @@ public interface Fightable {
 
     public float basicAttack();
 
+    public int getLevel();
+
 }

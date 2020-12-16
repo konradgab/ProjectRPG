@@ -4,6 +4,7 @@ import Abilities.Ability;
 import Fight.FightManager;
 import Fight.Fightable;
 import Fight.FightableEnemy;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 
 import java.util.List;
@@ -12,8 +13,8 @@ import java.util.List;
 public class Monster extends Enemy implements FightableEnemy {
 
 
-    public Monster(String name, float health, float mana, int armor, float currentHealth, float currentMana, List<Ability> Abilities, List<String> dialogues) {
-        super(name, health, mana, armor, currentHealth, currentMana, Abilities, dialogues);
+    public Monster(String name, int level, float health, float mana, int armor, float currentHealth, float currentMana, List<Ability> Abilities, List<String> dialogues) {
+        super(name, level, health, mana, armor, currentHealth, currentMana, Abilities, dialogues);
     }
 
     @Override
@@ -46,7 +47,3 @@ public class Monster extends Enemy implements FightableEnemy {
 
 }
 
-
-// shapem jest fightable
-// visitorami sa np Monster , Boss
-// XMLExportem jest fight Manager
