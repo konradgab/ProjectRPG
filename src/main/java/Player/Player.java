@@ -1,6 +1,8 @@
 package Player;
 import Abilities.Ability;
 import EventManager.PlayerEventManager;
+import Field.Field;
+import Field.IField;
 import Fight.Fightable;
 import Utils.IOUtils;
 import lombok.Getter;
@@ -20,6 +22,7 @@ public abstract class Player implements Fightable {
     private int armor;
     private float currentHealth;
     private float currentMana;
+    IField currentField;
     List <Ability> abilities;
 
     Player(){

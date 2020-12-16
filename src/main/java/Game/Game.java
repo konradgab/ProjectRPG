@@ -8,9 +8,12 @@ import Fight.FightManager;
 import Player.*;
 import Player.Builder.*;
 import Board.*;
+import Utils.IOUtils;
 import lombok.Getter;
 
 
+import java.io.File;
+import java.io.IOException;
 import java.util.Scanner;
 
 public class Game {
@@ -30,29 +33,25 @@ public class Game {
         return board;
     }
 
+    private Game() {
+        this.board = new Board();
+    }
+
 
 
     public static void main(String[] args) {
-        startGame();
-
+        loadConfig();
+        game = new Game();
+        game.getBoard().gameLoop();
     }
 
-
-    public static void startGame() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Witaj jak sie nazywasz?");
-        String name = scanner.nextLine();
-        MageBuilder mb = new MageBuilder();
-        Director director = new Director(mb);
-        director.constructEasyMage();
-        PlayerMage mage = mb.getProduct();
-        mage.setName(name);
-        mage.displayStatistics();
-        mage.printAbilities();
-        Achievement.getInstance().message("Player created hero: " + name);
-        //Monster yeti = new Monster("Yeti", 100, 0 , 0 );
-        //FightManager.fightPlayerVsEnemy(mage,yeti);
+    private static void loadConfig() {
+        File config = IOUtils.openFile("config/config.yml", "config.yml");
+        try {
+            Game.config = IOUtils.getMapper().readValue(config, Config.class);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
-
 
 }

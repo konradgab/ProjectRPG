@@ -6,16 +6,21 @@ import Fight.Fightable;
 import Fight.FightableEnemy;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.util.List;
 
 @Getter
+@Setter
+@NoArgsConstructor
 public class Monster extends Enemy implements FightableEnemy {
 
 
     public Monster(String name, int level, float health, float mana, int armor, float currentHealth, float currentMana, List<Ability> Abilities, List<String> dialogues) {
         super(name, level, health, mana, armor, currentHealth, currentMana, Abilities, dialogues);
     }
+
 
     @Override
     public float takeDamage(float damage) {

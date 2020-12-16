@@ -3,6 +3,8 @@ package Board;
 
 import Field.IField;
 
+import java.util.List;
+
 public interface IBoard {
     void startGame();
 
@@ -13,4 +15,6 @@ public interface IBoard {
     void save();
 
     void gameFinish();
+
+    public List<IField> getFields();
 }
