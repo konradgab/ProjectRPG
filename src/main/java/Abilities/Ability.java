@@ -1,17 +1,25 @@
 package Abilities;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.util.List;
 
+@Setter
 @Getter
 @AllArgsConstructor
+@NoArgsConstructor
 public class Ability {
+    @JsonProperty
     String name;
+    @JsonProperty
     String description;
+    @JsonProperty
     double cost;
+    @JsonProperty
     List<Float> multipliers;
 
     public Ability(String name, String description) {

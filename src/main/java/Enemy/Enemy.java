@@ -32,6 +32,8 @@ public abstract class Enemy {
     @JsonProperty
     int level;
     @JsonProperty
+    int experience;
+    @JsonProperty
     private float health;
     @JsonProperty
     private float mana;

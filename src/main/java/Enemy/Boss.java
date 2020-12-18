@@ -4,19 +4,16 @@ import Abilities.Ability;
 import Fight.FightManager;
 import Fight.Fightable;
 import Fight.FightableEnemy;
+import lombok.AllArgsConstructor;
 
 import java.util.List;
-
+@AllArgsConstructor
 public class Boss extends Enemy implements FightableEnemy {
-
-
-    public Boss(String name, int level, float health, float mana, int armor, float currentHealth, float currentMana, List<Ability> Abilities, List<String> dialogues) {
-        super(name, level, health, mana, armor, currentHealth, currentMana, Abilities, dialogues);
-    }
 
     @Override
     public float takeDamage(float damage) {
-        return 0;
+        setCurrentHealth(getCurrentHealth() - damage);
+        return damage;
     }
 
     @Override
@@ -26,12 +23,17 @@ public class Boss extends Enemy implements FightableEnemy {
 
     @Override
     public float basicAttack() {
-        return 0;
+        return 0.5f* getCurrentHealth();
     }
 
     @Override
     public int getLevel() {
         return 0;
+    }
+
+    @Override
+    public void restore() {
+
     }
 
     @Override

@@ -21,4 +21,9 @@ public interface Fightable {
 
     public int getLevel();
 
+    public void restore();
+
+    public double useAbility(int i);
+
+
 }

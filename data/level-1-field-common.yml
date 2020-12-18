@@ -4,16 +4,73 @@
   actions:
     - type: "mission"
       name: "Dark Forest"
-      description: "Clear The Forest"
+      description: "You are hooked by a farmer.\n He tells about the slaughter of a village near the town and monsters hiding in the forest.\n He asks for help in clearing the forest of the beast."
       enemies:
         - type: "monster"
-          name: "Wolf"
+          name: "Black Wolf"
           level: 1
-          health: 100
+          experience: 50
+          health: 300
           mana: 100
           armor: 0
-          currentHealth: 100
+          currentHealth: 300
           currentMana: 100
           abilities : []
           dialogues : []
+        - type: "monster"
+          name: "Grey Wolf"
+          level: 1
+          experience: 50
+          health: 350
+          mana: 100
+          armor: 0
+          currentHealth: 350
+          currentMana: 100
+          abilities: [ ]
+          dialogues: [ ]
+        - type: "monster"
+          name: "Werewolf"
+          level: 1
+          health: 350
+          mana: 100
+          armor: 0
+          currentHealth: 350
+          currentMana: 100
+          abilities: [ ]
+          dialogues: [ ]
+        - type: "monster"
+          name: "Dwarf"
+          level: 1
+          health: 400
+          mana: 100
+          armor: 0
+          currentHealth: 400
+          currentMana: 100
+          abilities: [ ]
+          dialogues: [ ]
+        - type: "boss"
+          name: "Shade"
+          level: 1
+          health: 400
+          mana: 100
+          armor: 0
+          currentHealth: 400
+          currentMana: 100
+          abilities:
+          - name: "Trinity force"
+            description: ""
+            cost: 0
+            multipliers:
+             - 2
+          - name: "Slim shady"
+            description: ""
+            cost: 0
+            multipliers:
+             - 1.75
+          - name: "Revenge"
+            description: ""
+            cost: 0
+            multipliers:
+              - 1.5
+          dialogues: [ ]
       reward: 10

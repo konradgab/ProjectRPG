@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>Enemy.Assassin</OriginalElement>
+  <nodes>
+    <node x="1943.1152243589736" y="298.0">Enemy.Enemy</node>
+    <node x="2237.25" y="437.0">Actions.Mission</node>
+    <node x="2122.323557692307" y="109.0">lombok.Setter</node>
+    <node x="562.9360576923075" y="298.0">Player.Builder.MageBuilder</node>
+    <node x="981.4360576923075" y="109.0">lombok.Getter</node>
+    <node x="929.6860576923075" y="298.0">Player.Player</node>
+    <node x="2393.3208333333337" y="109.0">Actions.IAction</node>
+    <node x="1316.187419871795" y="298.0">Fight.FightableAssassin</node>
+    <node x="566.0" y="511.0">Player.Builder.Director</node>
+    <node x="1402.9277243589736" y="437.0">Enemy.Monster</node>
+    <node x="588.25" y="437.0">Player.PlayerMage</node>
+    <node x="396.0" y="511.0">Achievement.Achievement</node>
+    <node x="715.0" y="511.0">Utils.IOUtils</node>
+    <node x="639.1583333333338" y="109.0">lombok.ToString</node>
+    <node x="826.6860576923075" y="298.0">Board.Board</node>
+    <node x="1293.3652243589736" y="109.0">Fight.FightableEnemy</node>
+    <node x="2405.3208333333337" y="437.0">Actions.Tournament</node>
+    <node x="2011.875" y="437.0">Enemy.Assassin</node>
+    <node x="1534.6777243589736" y="437.0">Enemy.Boss</node>
+    <node x="1971.3985576923076" y="0.0">com.fasterxml.jackson.annotation.JsonSubTypes</node>
+    <node x="178.9360576923075" y="0.0">Fight.Fightable</node>
+    <node x="2077.75" y="298.0">EventManager.PlayerEventListener</node>
+    <node x="1716.3985576923076" y="298.0">Field.Field</node>
+    <node x="2295.8125" y="298.0">Actions.Action</node>
+    <node x="0.0" y="511.0">EventManager.PlayerEventManager</node>
+    <node x="707.9360576923075" y="298.0">Config.Config</node>
+    <node x="219.0" y="511.0">Fight.FightManager</node>
+    <node x="1557.1485576923076" y="298.0">Abilities.Ability</node>
+    <node x="1502.125" y="109.0">Field.IField</node>
+    <node x="857.0" y="511.0">Logger.Logger</node>
+    <node x="2406.8125" y="298.0">Actions.Puzzle</node>
+    <node x="1676.8985576923076" y="0.0">com.fasterxml.jackson.annotation.JsonTypeInfo</node>
+    <node x="396.9360576923075" y="298.0">Player.Builder.WarriorBuilder</node>
+    <node x="390.31939102564047" y="109.0">Player.Builder.Builder</node>
+    <node x="992.0" y="511.0">Game.Game</node>
+    <node x="244.9360576923075" y="298.0">Player.Builder.ScoutBuilder</node>
+    <node x="763.1583333333338" y="109.0">Board.IBoard</node>
+    <node x="1799.125" y="109.0">lombok.AllArgsConstructor</node>
+    <node x="145.0" y="437.0">Player.PlayerWarrior</node>
+    <node x="0.0" y="437.0">Player.PlayerScout</node>
+    <node x="1612.125" y="109.0">lombok.NoArgsConstructor</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="Player.PlayerWarrior" target="Player.Player">
+      <point x="34.75" y="-14.5" />
+      <point x="249.25" y="407.0" />
+      <point x="974.6860576923075" y="407.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="Actions.Action" target="lombok.Getter">
+      <point x="-30.0" y="-14.5" />
+      <point x="2310.8125" y="168.0" />
+      <point x="1067.6860576923075" y="168.0" />
+      <point x="41.25" y="14.5" />
+    </edge>
+    <edge source="Enemy.Enemy" target="lombok.AllArgsConstructor">
+      <point x="-6.9166666666667425" y="-14.5" />
+      <point x="1977.698557692307" y="178.0" />
+      <point x="1929.625" y="178.0" />
+      <point x="43.5" y="14.5" />
+    </edge>
+    <edge source="Actions.Action" target="lombok.Setter">
+      <point x="0.0" y="-14.5" />
+      <point x="2340.8125" y="158.0" />
+      <point x="2203.323557692307" y="158.0" />
+      <point x="36.0" y="14.5" />
+    </edge>
+    <edge source="Player.Builder.WarriorBuilder" target="Player.Builder.Builder">
+      <point x="-36.5" y="-14.5" />
+      <point x="433.4360576923075" y="188.0" />
+      <point x="438.81939102564047" y="188.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="Player.PlayerScout" target="Fight.Fightable">
+      <point x="-31.25" y="-14.5" />
+      <point x="31.25" y="79.0" />
+      <point x="190.0360576923074" y="79.0" />
+      <point x="-44.40000000000009" y="14.5" />
+    </edge>
+    <edge source="Enemy.Enemy" target="lombok.Setter">
+      <point x="34.58333333333326" y="-14.5" />
+      <point x="2019.198557692307" y="268.0" />
+      <point x="2149.323557692307" y="268.0" />
+      <point x="-18.0" y="14.5" />
+    </edge>
+    <edge source="Player.Builder.ScoutBuilder" target="lombok.Getter">
+      <point x="33.0" y="-14.5" />
+      <point x="343.9360576923075" y="198.0" />
+      <point x="985.1860576923075" y="198.0" />
+      <point x="-41.25" y="14.5" />
+    </edge>
+    <edge source="Enemy.Monster" target="Enemy.Enemy">
+      <point x="19.40000000000009" y="-14.5" />
+      <point x="1470.8277243589737" y="397.0" />
+      <point x="1956.948557692307" y="397.0" />
+      <point x="-27.666666666666742" y="14.5" />
+    </edge>
+    <edge source="Enemy.Assassin" target="Fight.FightableAssassin">
+      <point x="-34.66666666666663" y="-14.5" />
+      <point x="2029.2083333333335" y="367.0" />
+      <point x="1399.687419871795" y="367.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="Actions.Puzzle" target="Actions.IAction">
+      <point x="0.0" y="-14.5" />
+      <point x="2451.8125" y="278.0" />
+      <point x="2453.9458333333337" y="278.0" />
+      <point x="12.125" y="14.5" />
+    </edge>
+    <edge source="Enemy.Monster" target="lombok.NoArgsConstructor">
+      <point x="0.0" y="-14.5" />
+      <point x="1451.4277243589736" y="387.0" />
+      <point x="1705.8985576923076" y="387.0" />
+      <point x="1705.8985576923076" y="238.0" />
+      <point x="1653.875" y="238.0" />
+      <point x="-41.75" y="14.5" />
+    </edge>
+    <edge source="Enemy.Boss" target="Fight.FightableEnemy">
+      <point x="-19.0" y="-14.5" />
+      <point x="1553.6777243589736" y="377.0" />
+      <point x="1224.062419871795" y="377.0" />
+      <point x="1224.062419871795" y="248.0" />
+      <point x="1366.3652243589736" y="248.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="Field.Field" target="Field.IField">
+      <point x="20.75" y="-14.5" />
+      <point x="1778.6485576923076" y="208.0" />
+      <point x="1547.125" y="208.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="Board.Board" target="lombok.Getter">
+      <point x="20.75" y="-14.5" />
+      <point x="888.9360576923075" y="238.0" />
+      <point x="1015.1860576923075" y="238.0" />
+      <point x="-11.25" y="14.5" />
+    </edge>
+    <edge source="Actions.Mission" target="lombok.Getter">
+      <point x="-36.375" y="-14.5" />
+      <point x="2249.375" y="347.0" />
+      <point x="1202.062419871795" y="347.0" />
+      <point x="1202.062419871795" y="238.0" />
+      <point x="1037.6860576923075" y="238.0" />
+      <point x="11.25" y="14.5" />
+    </edge>
+    <edge source="Player.PlayerScout" target="Player.Player">
+      <point x="31.25" y="-14.5" />
+      <point x="93.75" y="397.0" />
+      <point x="944.6860576923075" y="397.0" />
+      <point x="-30.0" y="14.5" />
+    </edge>
+    <edge source="Player.PlayerMage" target="Fight.Fightable">
+      <point x="-29.5" y="-14.5" />
+      <point x="617.75" y="387.0" />
+      <point x="234.4360576923075" y="387.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="Actions.Mission" target="Actions.IAction">
+      <point x="36.375" y="-14.5" />
+      <point x="2322.125" y="417.0" />
+      <point x="2396.3125" y="417.0" />
+      <point x="2396.3125" y="278.0" />
+      <point x="2429.6958333333337" y="278.0" />
+      <point x="-12.125" y="14.5" />
+    </edge>
+    <edge source="Config.Config" target="lombok.ToString">
+      <point x="-22.5" y="-14.5" />
+      <point x="730.4360576923075" y="188.0" />
+      <point x="691.1583333333338" y="188.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="Enemy.Assassin" target="Enemy.Enemy">
+      <point x="0.0" y="-14.5" />
+      <point x="2063.875" y="357.0" />
+      <point x="2012.2818910256406" y="357.0" />
+      <point x="27.666666666666742" y="14.5" />
+    </edge>
+    <edge source="Player.Builder.MageBuilder" target="Player.Builder.Builder">
+      <point x="-31.249999999999773" y="-14.5" />
+      <point x="594.1860576923077" y="188.0" />
+      <point x="471.1527243589737" y="188.0" />
+      <point x="32.33333333333326" y="14.5" />
+    </edge>
+    <edge source="Enemy.Monster" target="Fight.FightableEnemy">
+      <point x="-19.40000000000009" y="-14.5" />
+      <point x="1432.0277243589735" y="407.0" />
+      <point x="1213.062419871795" y="407.0" />
+      <point x="1213.062419871795" y="238.0" />
+      <point x="1317.698557692307" y="238.0" />
+      <point x="-48.66666666666663" y="14.5" />
+    </edge>
+    <edge source="Field.IField" target="com.fasterxml.jackson.annotation.JsonTypeInfo">
+      <point x="-22.5" y="-14.5" />
+      <point x="1524.625" y="69.0" />
+      <point x="1726.3985576923076" y="69.0" />
+      <point x="-16.5" y="14.5" />
+    </edge>
+    <edge source="Player.Player" target="lombok.Getter">
+      <point x="0.0" y="-14.5" />
+      <point x="974.6860576923075" y="248.0" />
+      <point x="1022.6860576923075" y="248.0" />
+      <point x="-3.75" y="14.5" />
+    </edge>
+    <edge source="Player.Player" target="lombok.Setter">
+      <point x="30.0" y="-14.5" />
+      <point x="1004.6860576923075" y="258.0" />
+      <point x="2131.323557692307" y="258.0" />
+      <point x="-36.0" y="14.5" />
+    </edge>
+    <edge source="Field.Field" target="lombok.Getter">
+      <point x="-20.75" y="-14.5" />
+      <point x="1737.1485576923076" y="218.0" />
+      <point x="1052.6860576923075" y="218.0" />
+      <point x="26.25" y="14.5" />
+    </edge>
+    <edge source="Enemy.Assassin" target="EventManager.PlayerEventListener">
+      <point x="34.66666666666663" y="-14.5" />
+      <point x="2098.5416666666665" y="417.0" />
+      <point x="2168.25" y="417.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="Player.PlayerMage" target="Player.Player">
+      <point x="29.5" y="-14.5" />
+      <point x="676.75" y="417.0" />
+      <point x="1004.6860576923075" y="417.0" />
+      <point x="30.0" y="14.5" />
+    </edge>
+    <edge source="Enemy.Monster" target="lombok.Getter">
+      <point x="-38.799999999999955" y="-14.5" />
+      <point x="1412.6277243589739" y="417.0" />
+      <point x="1066.0403044871791" y="417.0" />
+      <point x="1066.0403044871791" y="248.0" />
+      <point x="1030.1860576923075" y="248.0" />
+      <point x="3.75" y="14.5" />
+    </edge>
+    <edge source="Player.Builder.MageBuilder" target="lombok.Getter">
+      <point x="31.250000000000227" y="-14.5" />
+      <point x="656.6860576923077" y="218.0" />
+      <point x="1000.1860576923075" y="218.0" />
+      <point x="-26.25" y="14.5" />
+    </edge>
+    <edge source="Config.Config" target="lombok.Getter">
+      <point x="22.5" y="-14.5" />
+      <point x="775.4360576923075" y="228.0" />
+      <point x="1007.6860576923075" y="228.0" />
+      <point x="-18.75" y="14.5" />
+    </edge>
+    <edge source="Abilities.Ability" target="lombok.Getter">
+      <point x="-24.25" y="-14.5" />
+      <point x="1581.3985576923076" y="228.0" />
+      <point x="1045.1860576923075" y="228.0" />
+      <point x="18.75" y="14.5" />
+    </edge>
+    <edge source="Actions.Mission" target="Actions.Action">
+      <point x="12.125" y="-14.5" />
+      <point x="2297.875" y="407.0" />
+      <point x="2318.3125" y="407.0" />
+      <point x="-22.5" y="14.5" />
+    </edge>
+    <edge source="Enemy.Monster" target="lombok.Setter">
+      <point x="38.799999999999955" y="-14.5" />
+      <point x="1490.2277243589738" y="417.0" />
+      <point x="2067.25" y="417.0" />
+      <point x="2067.25" y="278.0" />
+      <point x="2167.323557692307" y="278.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="Fight.FightableEnemy" target="com.fasterxml.jackson.annotation.JsonTypeInfo">
+      <point x="0.0" y="-14.5" />
+      <point x="1366.3652243589736" y="59.0" />
+      <point x="1693.3985576923076" y="59.0" />
+      <point x="-49.5" y="14.5" />
+    </edge>
+    <edge source="Actions.IAction" target="com.fasterxml.jackson.annotation.JsonSubTypes">
+      <point x="24.25" y="-14.5" />
+      <point x="2466.0708333333337" y="49.0" />
+      <point x="2086.898557692308" y="49.0" />
+      <point x="49.5" y="14.5" />
+    </edge>
+    <edge source="Field.IField" target="com.fasterxml.jackson.annotation.JsonSubTypes">
+      <point x="22.5" y="-14.5" />
+      <point x="1569.625" y="89.0" />
+      <point x="2020.8985576923076" y="89.0" />
+      <point x="-16.5" y="14.5" />
+    </edge>
+    <edge source="Enemy.Enemy" target="com.fasterxml.jackson.annotation.JsonTypeInfo">
+      <point x="6.9166666666667425" y="-14.5" />
+      <point x="1991.5318910256406" y="238.0" />
+      <point x="2011.4583333333335" y="238.0" />
+      <point x="2011.4583333333335" y="69.0" />
+      <point x="1759.3985576923076" y="69.0" />
+      <point x="16.5" y="14.5" />
+    </edge>
+    <edge source="Player.Builder.ScoutBuilder" target="Player.Builder.Builder">
+      <point x="-33.0" y="-14.5" />
+      <point x="277.9360576923075" y="188.0" />
+      <point x="406.4860576923072" y="188.0" />
+      <point x="-32.33333333333326" y="14.5" />
+    </edge>
+    <edge source="Fight.FightableEnemy" target="Fight.Fightable">
+      <point x="-48.66666666666663" y="-14.5" />
+      <point x="1317.698557692307" y="79.0" />
+      <point x="278.8360576923076" y="79.0" />
+      <point x="44.400000000000034" y="14.5" />
+    </edge>
+    <edge source="Actions.Action" target="Actions.IAction">
+      <point x="30.0" y="-14.5" />
+      <point x="2370.8125" y="268.0" />
+      <point x="2405.4458333333337" y="268.0" />
+      <point x="-36.375" y="14.5" />
+    </edge>
+    <edge source="Player.PlayerWarrior" target="Fight.Fightable">
+      <point x="-34.75" y="-14.5" />
+      <point x="179.75" y="89.0" />
+      <point x="212.23605769230744" y="89.0" />
+      <point x="-22.200000000000045" y="14.5" />
+    </edge>
+    <edge source="Player.Player" target="Fight.Fightable">
+      <point x="-30.0" y="-14.5" />
+      <point x="944.6860576923075" y="89.0" />
+      <point x="256.63605769230753" y="89.0" />
+      <point x="22.200000000000045" y="14.5" />
+    </edge>
+    <edge source="Actions.Mission" target="lombok.Setter">
+      <point x="-12.125" y="-14.5" />
+      <point x="2273.625" y="417.0" />
+      <point x="2269.25" y="417.0" />
+      <point x="2269.25" y="278.0" />
+      <point x="2185.323557692307" y="278.0" />
+      <point x="18.0" y="14.5" />
+    </edge>
+    <edge source="Abilities.Ability" target="lombok.AllArgsConstructor">
+      <point x="24.25" y="-14.5" />
+      <point x="1629.8985576923076" y="248.0" />
+      <point x="1842.625" y="248.0" />
+      <point x="-43.5" y="14.5" />
+    </edge>
+    <edge source="Board.Board" target="Board.IBoard">
+      <point x="-20.75" y="-14.5" />
+      <point x="847.4360576923075" y="188.0" />
+      <point x="808.1583333333338" y="188.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="Actions.Tournament" target="Actions.Action">
+      <point x="-29.5" y="-14.5" />
+      <point x="2434.8208333333337" y="407.0" />
+      <point x="2363.3125" y="407.0" />
+      <point x="22.5" y="14.5" />
+    </edge>
+    <edge source="Enemy.Enemy" target="lombok.NoArgsConstructor">
+      <point x="-20.75" y="-14.5" />
+      <point x="1963.8652243589736" y="188.0" />
+      <point x="1737.375" y="188.0" />
+      <point x="41.75" y="14.5" />
+    </edge>
+    <edge source="Actions.IAction" target="com.fasterxml.jackson.annotation.JsonTypeInfo">
+      <point x="-24.25" y="-14.5" />
+      <point x="2417.5708333333337" y="59.0" />
+      <point x="1792.3985576923076" y="59.0" />
+      <point x="49.5" y="14.5" />
+    </edge>
+    <edge source="Enemy.Enemy" target="lombok.Getter">
+      <point x="-34.58333333333326" y="-14.5" />
+      <point x="1950.0318910256406" y="198.0" />
+      <point x="1060.1860576923075" y="198.0" />
+      <point x="33.75" y="14.5" />
+    </edge>
+    <edge source="Player.Builder.WarriorBuilder" target="lombok.Getter">
+      <point x="36.5" y="-14.5" />
+      <point x="506.4360576923075" y="208.0" />
+      <point x="992.6860576923075" y="208.0" />
+      <point x="-33.75" y="14.5" />
+    </edge>
+    <edge source="Enemy.Enemy" target="com.fasterxml.jackson.annotation.JsonSubTypes">
+      <point x="20.75" y="-14.5" />
+      <point x="2005.3652243589736" y="248.0" />
+      <point x="2111.823557692307" y="248.0" />
+      <point x="2111.823557692307" y="89.0" />
+      <point x="2053.898557692308" y="89.0" />
+      <point x="16.5" y="14.5" />
+    </edge>
+    <edge source="Enemy.Boss" target="Enemy.Enemy">
+      <point x="19.0" y="-14.5" />
+      <point x="1591.6777243589736" y="407.0" />
+      <point x="1984.6152243589736" y="407.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="Actions.Tournament" target="Actions.IAction">
+      <point x="29.5" y="-14.5" />
+      <point x="2493.8208333333337" y="417.0" />
+      <point x="2507.3125" y="417.0" />
+      <point x="2507.3125" y="278.0" />
+      <point x="2478.1958333333337" y="278.0" />
+      <point x="36.375" y="14.5" />
+    </edge>
+    <edge source="Fight.FightableAssassin" target="Fight.FightableEnemy">
+      <point x="0.0" y="-14.5" />
+      <point x="1399.687419871795" y="248.0" />
+      <point x="1415.0318910256403" y="248.0" />
+      <point x="48.66666666666663" y="14.5" />
+    </edge>
+    <edge source="Fight.FightableEnemy" target="com.fasterxml.jackson.annotation.JsonSubTypes">
+      <point x="48.66666666666663" y="-14.5" />
+      <point x="1415.0318910256403" y="79.0" />
+      <point x="1987.8985576923076" y="79.0" />
+      <point x="-49.5" y="14.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.5137578616352201" x="1262.0" y="270.0" />
+  <SelectedNodes />
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

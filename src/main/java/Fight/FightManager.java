@@ -29,12 +29,14 @@ public class FightManager {
                 break;
             }
         }
+        player.restore();
         return true;
     }
 
     public boolean fightPlayerVsBoss(Fightable player, FightableEnemy enemy) {
         while (true) {
             float damageValue = playerTurn(player);
+            System.out.println(damageValue);
             System.out.println("You dealt " + damageValue + " damage to Enemy");
             enemy.takeDamage(damageValue);
             if(enemy.getCurrentHealth() <= 0) {
@@ -93,6 +95,7 @@ public class FightManager {
             System.out.println("Ups, You didn't have enough mana.");
             return 0;
         }
+        player.
         return player.getAbilities().get(choice - 1).use(player.getMainAttribute());
     }
 

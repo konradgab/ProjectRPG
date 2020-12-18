@@ -6,15 +6,13 @@ import Fight.FightManager;
 import Fight.Fightable;
 import Fight.FightableAssassin;
 import Player.Player;
+import lombok.AllArgsConstructor;
 
 import java.util.List;
+@AllArgsConstructor
 
 public class Assassin extends Enemy implements FightableAssassin, PlayerEventListener {
 
-
-    public Assassin(String name, int level, float health, float mana, int armor, float currentHealth, float currentMana, List<Ability> Abilities, List<String> dialogues) {
-        super(name, level, health, mana, armor, currentHealth, currentMana, Abilities, dialogues);
-    }
 
     @Override
     public float takeDamage(float damage) {
@@ -30,6 +28,11 @@ public class Assassin extends Enemy implements FightableAssassin, PlayerEventLis
     @Override
     public float basicAttack() {
         return (float) (0.2 * this.getCurrentHealth());
+    }
+
+    @Override
+    public void restore() {
+
     }
 
     @Override
