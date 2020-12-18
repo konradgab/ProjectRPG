@@ -4,6 +4,7 @@ import Abilities.Ability;
 import Fight.FightManager;
 import Fight.Fightable;
 import Fight.FightableEnemy;
+import Fight.FightablePlayer;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -35,7 +36,7 @@ public class Monster extends Enemy implements FightableEnemy {
     }
 
     @Override
-    public boolean fight(Fightable player, FightManager fightManager) {
+    public boolean fight(FightablePlayer player, FightManager fightManager) {
         return fightManager.fightPlayerVsEnemy(player, this);
     }
 

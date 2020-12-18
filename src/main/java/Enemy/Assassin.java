@@ -5,6 +5,7 @@ import EventManager.PlayerEventListener;
 import Fight.FightManager;
 import Fight.Fightable;
 import Fight.FightableAssassin;
+import Fight.FightablePlayer;
 import Player.Player;
 import lombok.AllArgsConstructor;
 
@@ -40,15 +41,16 @@ public class Assassin extends Enemy implements FightableAssassin, PlayerEventLis
         return this.dialogues;
     }
 
-    @Override
-    public boolean fight(Fightable player, FightManager fightManager) {
-        return false;
-    }
 
     @Override
     public void update(String eventType, Player player) {
         if (player.getLevel() % 10 == 0) {
             FightManager.startFight( player, this);
         }
+    }
+
+    @Override
+    public boolean fight(FightablePlayer player, FightManager fightManager) {
+        return false;
     }
 }

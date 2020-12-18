@@ -23,7 +23,4 @@ public interface Fightable {
 
     public void restore();
 
-    public double useAbility(int i);
-
-
 }

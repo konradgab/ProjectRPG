@@ -16,5 +16,5 @@ import com.fasterxml.jackson.annotation.JsonTypeInfo;
         @JsonSubTypes.Type(value = Assassin.class, name = "assassin"),
 })
 public interface FightableEnemy extends Fightable{
-    public boolean fight (Fightable player, FightManager fightManager);
+    public boolean fight (FightablePlayer player, FightManager fightManager);
 }

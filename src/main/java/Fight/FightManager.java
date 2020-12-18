@@ -8,11 +8,12 @@ import Utils.IOUtils;
 public class FightManager {
     private static final FightManager instance = new FightManager();
 
-    public static boolean startFight(Fightable player, FightableEnemy fightable) {
+    public static boolean startFight(FightablePlayer player, FightableEnemy fightable) {
+        System.out.println(Logger.BG_RED + "Fight against: " + fightable.getName()+ "." + Logger.RESET);
         return fightable.fight(player , instance);
     }
 
-    public boolean fightPlayerVsEnemy(Fightable player, FightableEnemy enemy) {
+    public boolean fightPlayerVsEnemy(FightablePlayer player, FightableEnemy enemy) {
         while (true) {
             float damageValue = playerTurn(player);
             System.out.println("You dealt " + damageValue + " damage to Enemy");
@@ -33,7 +34,7 @@ public class FightManager {
         return true;
     }
 
-    public boolean fightPlayerVsBoss(Fightable player, FightableEnemy enemy) {
+    public boolean fightPlayerVsBoss(FightablePlayer player, FightableEnemy enemy) {
         while (true) {
             float damageValue = playerTurn(player);
             System.out.println(damageValue);
@@ -54,7 +55,7 @@ public class FightManager {
         return true;
     }
 
-    public boolean fightPlayerVsAssassin(Fightable player, FightableAssassin enemy) {
+    public boolean fightPlayerVsAssassin(FightablePlayer player, FightableAssassin enemy) {
         while (true) {
             float damageValue = playerTurn(player);
             System.out.println("You dealt " + damageValue + " damage to Enemy");
@@ -76,7 +77,7 @@ public class FightManager {
 
 
 
-    public float playerTurn(Fightable player) {
+    public float playerTurn(FightablePlayer player) {
         System.out.println("It's your turn " + Logger.BLUE + player.getName() + "." + Logger.RESET);
         System.out.println("Your current health: " + Logger.RED + player.getCurrentHealth() + "." + Logger.RESET);
         System.out.println("Your current mana: " + Logger.RED + player.getCurrentMana() + "." + Logger.RESET);
@@ -95,8 +96,7 @@ public class FightManager {
             System.out.println("Ups, You didn't have enough mana.");
             return 0;
         }
-        player.
-        return player.getAbilities().get(choice - 1).use(player.getMainAttribute());
+        return player.useAbility(choice - 1);
     }
 
     public float enemyTurn(Fightable enemy) {
@@ -105,7 +105,7 @@ public class FightManager {
         return enemy.basicAttack();
     }
 
-    public float bossTurn(Fightable boss) {
+    public float bossTurn(FightableEnemy boss) {
         System.out.println("It's boss turn:  " + Logger.BLUE + boss.getName() + "." + Logger.RESET);
         System.out.println("Boss current health: " + Logger.RED + boss.getCurrentHealth() + "." + Logger.RESET);
         if(boss.getCurrentHealth() < 90) {

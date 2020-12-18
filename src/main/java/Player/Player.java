@@ -4,6 +4,7 @@ import EventManager.PlayerEventManager;
 import Field.Field;
 import Field.IField;
 import Fight.Fightable;
+import Fight.FightablePlayer;
 import Utils.IOUtils;
 import lombok.Getter;
 import lombok.Setter;
@@ -12,7 +13,7 @@ import java.util.List;
 
 @Setter
 @Getter
-public abstract class Player implements Fightable {
+public abstract class Player implements FightablePlayer {
     PlayerEventManager eventManager = new PlayerEventManager("level up");
     String name;
     private int level;
@@ -95,6 +96,11 @@ public abstract class Player implements Fightable {
     public void restore() {
         this.setCurrentMana(this.getMana());
         this.setCurrentHealth(this.getHealth());
+    }
+
+    public float useAbility(int abilityNumber) {
+        this.setCurrentMana((float) (this.getCurrentMana() - this.getAbilities().get(abilityNumber).getCost()));
+        return this.getAbilities().get(abilityNumber).use(this.getMainAttribute());
     }
 
 

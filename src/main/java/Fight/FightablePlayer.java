@@ -1,4 +1,5 @@
 package Fight;
 
-public interface FightablePlayer {
+public interface FightablePlayer extends Fightable {
+    public float useAbility(int abilityNumber);
 }
