@@ -14,7 +14,7 @@ import java.util.List;
 @Setter
 @Getter
 public abstract class Player implements FightablePlayer {
-    PlayerEventManager eventManager = new PlayerEventManager("level up");
+    PlayerEventManager eventManager = new PlayerEventManager("travel");
     String name;
     private int level;
     private float health;
@@ -47,6 +47,13 @@ public abstract class Player implements FightablePlayer {
         this.currentMana = 0;
     }
 
+    public int move() {
+        System.out.println("Would you like to go to the next or previous location?");
+        System.out.println("1. Next.");
+        System.out.println("2. Previous.");
+        return IOUtils.nextInt();
+    }
+
     public void displayStatistics() {
         System.out.println("Your statistics: ");
         System.out.println("Name: " + name);
@@ -71,29 +78,12 @@ public abstract class Player implements FightablePlayer {
             setExperience(getExperience() + exp - 100*getLevel());
             setLevel(getLevel() + 1);
             levelUp();
-            eventManager.notify("level up", this);
         } else {
             setExperience(currentExperience);
         }
     }
 
-    public void levelUp() {
-        System.out.println("You advanced from level + " + this.getLevel() + " to level " + this.getLevel() );
-        System.out.println("Which attribute do you want to improve: ");
-        System.out.println("1. Health.");
-        System.out.println("2. Mana.");
-        int choice = IOUtils.nextInt();
-        switch (choice) {
-            case 1:
-                setHealth(getHealth() + 5);
-                restore();
-                break;
-            case 2:
-                setMana(getMana() + 5);
-                restore();
-        }
-    }
-
+    abstract void levelUp();
 
     public void restore() {
         this.setCurrentMana(this.getMana());

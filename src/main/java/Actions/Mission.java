@@ -28,8 +28,6 @@ public class Mission extends Action implements IAction{
 
     @Override
     public String getInfo() {
-        System.out.println("Mission: " + this.getName());
-        System.out.println("Description: " + this.getDescription());
-        return "a";
+        return "Mission: " + this.getName() + "\n" + "Description: " + this.getDescription();
     }
 }

@@ -18,6 +18,6 @@ public interface IField {
 
     void execute(Player player);
 
-    void displayActions();
+    int displayActions(Player player);
 
 }

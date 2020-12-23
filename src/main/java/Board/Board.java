@@ -76,20 +76,48 @@ public class Board implements IBoard {
     @Override
     public void gameLoop() {
         while (true) {
-            System.out.println("You are in: " + player.getCurrentField().getName());
-            System.out.println("Description: " + player.getCurrentField().getDescription());
-            player.getCurrentField().displayActions();
-            System.out.println("Do u want to try complete this mission? [y/n]");
-            String choice = IOUtils.getScanner().next();
-            if(choice.equals("y")) {
-                player.getCurrentField().execute(this.getPlayer());
-            } else {
-                break;
+            int choice = nextAction();
+            switch (choice) {
+                case 1:
+                    this.player.getCurrentField().displayActions(this.getPlayer());
+                    break;
+                case 2:
+                    int direction = player.move();
+                    travel(direction);
+                    player.getEventManager().notify("travel", this.getPlayer());
+                    break;
+                case 3:
+                    System.exit(0);
             }
+        }
+    }
+
+    public int nextAction() {
+        System.out.println("You are in: " + player.getCurrentField().getName());
+        System.out.println("Description: " + player.getCurrentField().getDescription());
+        System.out.println("Possible actions: ");
+        System.out.println("1. Search for missions.");
+        System.out.println("2. Move to the next city.");
+        System.out.println("3. Exit");
+        System.out.print("What is your next move?(default: 2) ");
+        int choice = IOUtils.nextInt();
+        System.out.println();
+        return choice;
+    }
+
+    public void travel(int direction) {
+        int i = 0;
+        for(var field : getFields()) {
+            if(field.equals(player.getCurrentField())) break;
+            else i++;
+        }
+        if(direction == 1) {
+            player.setCurrentField(this.getFields().get((i + 1) % 10));
+        } else {
+            player.setCurrentField(this.getFields().get((i - 1) % 10));
         }
 
     }
-
 
     @Override
     public IField getField(int level, int filedNumber) {

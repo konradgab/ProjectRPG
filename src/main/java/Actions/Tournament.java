@@ -11,6 +11,6 @@ public class Tournament extends Action implements IAction {
 
     @Override
     public String getInfo() {
-        return null;
+        return "";
     }
 }

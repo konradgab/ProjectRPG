@@ -13,6 +13,7 @@ public class Puzzle implements IAction{
 
     @Override
     public String getInfo() {
-        return null;
+
+        return "";
     }
 }

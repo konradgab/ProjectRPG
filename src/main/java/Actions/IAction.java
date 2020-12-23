@@ -17,6 +17,6 @@ public interface IAction {
 
     boolean execute(Player player);
 
-    String getInfo();
+     String getInfo();
 
 }
