@@ -60,7 +60,7 @@ public class Board implements IBoard {
         director.constructEasyMage();
         PlayerMage mage = mb.getProduct();
         mage.setName(name);
-        Achievement.getInstance().message("Player created hero: " + name);
+        Achievement.getInstance().message("Player created hero: " + name, mage.getName());
         return mage;
     }
 

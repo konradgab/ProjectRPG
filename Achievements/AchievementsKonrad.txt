@@ -1,0 +1,6 @@
+[2020-12-18]Player created hero: Konrad
+[2020-12-18]Player won fight against: Black Wolf.
+[2020-12-18]Player won fight against: Grey Wolf.
+[2020-12-18]Player won fight against: Werewolf.
+[2020-12-18]Player won fight against: Dwarf.
+[2020-12-18]Player won fight against: Shade.

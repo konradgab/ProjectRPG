@@ -64,11 +64,13 @@ public abstract class Player implements FightablePlayer {
     }
 
 
-    public void addExp(int exp) {
+    @Override
+    public void getReward(int exp) {
         int currentExperience = getExperience() + exp;
         if(currentExperience >= 100*getLevel()) {
             setExperience(getExperience() + exp - 100*getLevel());
             setLevel(getLevel() + 1);
+            levelUp();
             eventManager.notify("level up", this);
         } else {
             setExperience(currentExperience);

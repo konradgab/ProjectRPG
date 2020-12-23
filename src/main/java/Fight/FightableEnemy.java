@@ -17,4 +17,5 @@ import com.fasterxml.jackson.annotation.JsonTypeInfo;
 })
 public interface FightableEnemy extends Fightable{
     public boolean fight (FightablePlayer player, FightManager fightManager);
+    public int getExperience();
 }

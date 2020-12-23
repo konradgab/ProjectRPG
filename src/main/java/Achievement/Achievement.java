@@ -12,18 +12,22 @@ public class Achievement {
 
     private static Achievement instance;
 
-    private Achievement(){};
+    private Achievement() {
+    }
+
+    ;
 
     public static synchronized Achievement getInstance() {
-        if(instance == null) {
+        if (instance == null) {
             instance = new Achievement();
         }
         return instance;
     }
-    public void message(String message){
+
+    public void message(String message, String name) {
 
         File logsFolder = new File("Achievements");
-        if(!logsFolder.exists()){
+        if (!logsFolder.exists()) {
             //Create the directory
             System.err.println("INFO: Creating new logs directory!");
             logsFolder.mkdir();
@@ -33,18 +37,24 @@ public class Achievement {
         DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
         Calendar cal = Calendar.getInstance();
 
-        File achievement = new File("Achievements" + File.separator + "Achievements.txt");
-        try{
+        File achievement = new File("Achievements" +  File.separator + "Achievements" + name +".txt");
+        if(!achievement.exists()){
+            try{
+                achievement.createNewFile();
+            } catch(IOException e) {
+                e.printStackTrace();
+            }
+        }
+
+        try {
             FileWriter fw = new FileWriter(achievement, true);
-            fw.write("[" + dateFormat.format(new Date()) + "]" +  message + "\n");
+            fw.write("[" + dateFormat.format(new Date()) + "]" + message + "\n");
             fw.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
 
     }
-
-
 
 
 }
