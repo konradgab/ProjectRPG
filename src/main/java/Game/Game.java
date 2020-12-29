@@ -3,6 +3,7 @@ package Game;
 import Achievement.*;
 import Board.Board;
 import Config.Config;
+import Enemy.Boss;
 import Enemy.Monster;
 import Fight.FightManager;
 import Player.*;
@@ -43,6 +44,8 @@ public class Game {
         loadConfig();
         game = new Game();
         game.getBoard().gameLoop();
+
+
     }
 
     private static void loadConfig() {

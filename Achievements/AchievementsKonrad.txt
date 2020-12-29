@@ -12,3 +12,28 @@
 [2020-12-23]Player won fight against: Werewolf.
 [2020-12-23]Player won fight against: Dwarf.
 [2020-12-23]Player won fight against: Shade.
+[2020-12-28]Player created hero: Konrad
+[2020-12-28]Player won fight against: Black Wolf.
+[2020-12-28]Player won fight against: Grey Wolf.
+[2020-12-28]Player won fight against: Werewolf.
+[2020-12-28]Player won fight against: Dwarf.
+[2020-12-28]Player won fight against: Shade.
+[2020-12-28]Player created hero: Konrad
+[2020-12-28]Player won fight against: Black Wolf.
+[2020-12-28]Player won fight against: Grey Wolf.
+[2020-12-28]Player won fight against: Werewolf.
+[2020-12-28]Player won fight against: Dwarf.
+[2020-12-28]Player won fight against: Shade.
+[2020-12-28]Player created hero: Konrad
+[2020-12-28]Player won fight against: Black Wolf.
+[2020-12-28]Player won fight against: Grey Wolf.
+[2020-12-28]Player won fight against: Werewolf.
+[2020-12-28]Player won fight against: Dwarf.
+[2020-12-28]Player created hero: Konrad
+[2020-12-28]Player won fight against: Black Wolf.
+[2020-12-28]Player won fight against: Grey Wolf.
+[2020-12-28]Player won fight against: Werewolf.
+[2020-12-28]Player won fight against: Dwarf.
+[2020-12-28]Player won fight against: Shade.
+[2020-12-28]Player created hero: Konrad
+[2020-12-28]Player created hero: Konrad

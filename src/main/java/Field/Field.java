@@ -28,6 +28,7 @@ public class Field implements IField {
         int i = 1;
         for ( var x : actions) {
             System.out.println(i + ". " + x.getInfo());
+            i++;
         }
         System.out.println("Which mission would you like to try: ");
         int choice = IOUtils.nextInt();

@@ -31,6 +31,7 @@
         - type: "monster"
           name: "Werewolf"
           level: 1
+          experience: 100
           health: 350
           mana: 100
           armor: 0
@@ -41,6 +42,7 @@
         - type: "monster"
           name: "Dwarf"
           level: 1
+          experience: 100
           health: 400
           mana: 100
           armor: 0
@@ -51,6 +53,7 @@
         - type: "boss"
           name: "Shade"
           level: 1
+          experience: 500
           health: 400
           mana: 100
           armor: 0
@@ -73,4 +76,35 @@
             multipliers:
               - 1.5
           dialogues: [ ]
+      reward: 10
+    - type: "mission"
+      name: "Beauty and the Beast"
+      description: "Walking along the street you heard screams.\n Following the screams you see a beautiful woman being attacked by a huge rat."
+      enemies:
+          - type: "boss"
+            name: "Giant Rat"
+            level: 1
+            experience: 500
+            health: 500
+            mana: 100
+            armor: 0
+            currentHealth: 400
+            currentMana: 100
+            abilities:
+              - name: "Poisonous bite"
+                description: ""
+                cost: 0
+                multipliers:
+                  - 1.2
+              - name: "Neon flame"
+                description: ""
+                cost: 0
+                multipliers:
+                  - 1.75
+              - name: "Green death"
+                description: ""
+                cost: 0
+                multipliers:
+                  - 1.5
+            dialogues: [ ]
       reward: 10

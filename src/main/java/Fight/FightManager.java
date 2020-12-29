@@ -93,15 +93,15 @@ public class FightManager {
     public float bossTurn(FightableEnemy boss) {
         System.out.println("It's boss turn:  " + Logger.BLUE + boss.getName() + "." + Logger.RESET);
         System.out.println("Boss current health: " + Logger.RED + boss.getCurrentHealth() + "." + Logger.RESET);
-        if (boss.getCurrentHealth() < 90) {
+        if (boss.getCurrentHealth() < 0.9*boss.getHealth()) {
             System.out.println(boss.getName() + "used his ability : " + boss.getAbilities().get(0).getName());
             return boss.getAbilities().get(0).use(boss.getCurrentHealth());
         }
-        if (boss.getCurrentHealth() < 50) {
+        if (boss.getCurrentHealth() < 0.5*boss.getHealth()) {
             System.out.println(boss.getName() + "used his ability : " + boss.getAbilities().get(1).getName());
             return boss.getAbilities().get(0).use(boss.getCurrentHealth());
         }
-        if (boss.getCurrentHealth() < 10) {
+        if (boss.getCurrentHealth() < 0.1*boss.getHealth()) {
             System.out.println(boss.getName() + "used his ability : " + boss.getAbilities().get(2).getName());
             return boss.getAbilities().get(2).use(boss.getCurrentHealth());
         }
