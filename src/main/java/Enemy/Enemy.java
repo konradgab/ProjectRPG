@@ -2,6 +2,7 @@ package Enemy;
 
 import Abilities.Ability;
 import Field.Field;
+import Fight.FightableEnemy;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonSubTypes;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
@@ -26,7 +27,7 @@ import java.util.List;
         @JsonSubTypes.Type(value = Boss.class, name = "boss"),
         @JsonSubTypes.Type(value = Assassin.class, name = "assassin"),
 })
-public abstract class Enemy {
+public abstract class Enemy implements FightableEnemy {
     @JsonProperty
     String name;
     @JsonProperty

@@ -1,4 +1,5 @@
 package Player;
+
 import Abilities.Ability;
 import EventManager.PlayerEventManager;
 import Field.Field;
@@ -13,6 +14,7 @@ import java.util.List;
 
 @Setter
 @Getter
+
 public abstract class Player implements FightablePlayer {
     PlayerEventManager eventManager = new PlayerEventManager("travel");
     String name;
@@ -24,9 +26,9 @@ public abstract class Player implements FightablePlayer {
     private float currentHealth;
     private float currentMana;
     IField currentField;
-    List <Ability> abilities;
+    List<Ability> abilities;
 
-    Player(){
+    public Player() {
         this.level = 0;
         this.health = 0;
         this.mana = 0;
@@ -36,7 +38,7 @@ public abstract class Player implements FightablePlayer {
         this.currentMana = 0;
     }
 
-    Player(String name){
+    public Player(String name) {
         this.name = name;
         this.level = 0;
         this.health = 0;
@@ -45,6 +47,22 @@ public abstract class Player implements FightablePlayer {
         this.armor = 0;
         this.currentHealth = 0;
         this.currentMana = 0;
+    }
+
+    public Player(Player target) {
+        if (target != null) {
+            this.eventManager = target.getEventManager();
+            this.name = target.name;
+            this.level = target.level;
+            this.health = target.health;
+            this.mana = target.mana;
+            this.experience = target.experience;
+            this.armor = target.armor;
+            this.currentHealth = target.currentHealth;
+            this.currentMana = target.currentMana;
+            this.currentField = target.currentField;
+            this.abilities = target.abilities;
+        }
     }
 
     public int move() {
@@ -64,18 +82,20 @@ public abstract class Player implements FightablePlayer {
         System.out.println("Armor: " + armor);
     }
 
-    public void printAbilities(){
-        for(Ability ability : getAbilities()){
+    public void printAbilities() {
+        for (Ability ability : getAbilities()) {
             System.out.println("name: " + ability.getName() + "\n" + ability.getDescription());
         }
     }
+
+    public abstract Player clone();
 
 
     @Override
     public void getReward(int exp) {
         int currentExperience = getExperience() + exp;
-        if(currentExperience >= 100*getLevel()) {
-            setExperience(getExperience() + exp - 100*getLevel());
+        if (currentExperience >= 100 * getLevel()) {
+            setExperience(getExperience() + exp - 100 * getLevel());
             setLevel(getLevel() + 1);
             levelUp();
         } else {

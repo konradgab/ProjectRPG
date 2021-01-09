@@ -8,6 +8,15 @@ public class PlayerScout extends Player implements Fightable {
         super();
     }
 
+    @Override
+    public Player clone() {
+        return new PlayerScout(this);
+    }
+
+    public PlayerScout(PlayerScout target) {
+        super(target);
+    }
+
 
     @Override
     public float takeDamage(float damage) {

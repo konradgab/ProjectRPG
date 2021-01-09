@@ -8,6 +8,15 @@ public class PlayerMage extends Player implements Fightable {
         super();
     }
 
+    public PlayerMage(PlayerMage target) {
+        super(target);
+    }
+
+    @Override
+    public Player clone() {
+        return new PlayerMage(this);
+    }
+
 
     @Override
     public float takeDamage(float damage) {

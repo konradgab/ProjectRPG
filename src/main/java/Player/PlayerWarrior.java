@@ -8,6 +8,14 @@ public class PlayerWarrior extends Player implements Fightable {
         super();
     }
 
+    public PlayerWarrior(PlayerWarrior target) {
+        super(target);
+    }
+
+    @Override
+    public Player clone() {
+        return new PlayerWarrior(this);
+    }
 
     @Override
     public float takeDamage(float damage) {
