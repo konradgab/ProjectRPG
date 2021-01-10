@@ -1,0 +1,11 @@
+type: "monster"
+name: "Black Wolf"
+level: 1
+experience: 50
+health: 300
+mana: 100
+armor: 0
+currentHealth: 300
+currentMana: 100
+abilities : []
+dialogues : []

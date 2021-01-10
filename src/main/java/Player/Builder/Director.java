@@ -39,6 +39,15 @@ public class Director {
         builder.setAbilities(mageAbilities());
     }
 
+    public void constructTestMage() {
+        builder.setArmor(100);
+        builder.setExperience(0);
+        builder.setHealth(10000);
+        builder.setLevel(1);
+        builder.setMana(100);
+        builder.setAbilities(mageAbilities());
+    }
+
     public void constructEasyWarrior() {
         builder.setArmor(50);
         builder.setExperience(0);

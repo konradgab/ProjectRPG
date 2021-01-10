@@ -1,32 +1,40 @@
 package Enemy;
 
 import Abilities.Ability;
+import Fight.FightManager;
 import Fight.FightableGroup;
-import Logger.Logger;
-import lombok.AllArgsConstructor;
+import Fight.FightablePlayer;
+import lombok.Getter;
+import lombok.Setter;
 
-import javax.management.ConstructorParameters;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Random;
 
+@Getter
+@Setter
 public class EnemiesGroup implements FightableGroup {
     String name;
     public List<Enemy> group;
     Random rand = new Random();
+     int experience = 0;
 
-    EnemiesGroup(String name, List<Enemy> group) {
+    public EnemiesGroup(String name, List<Enemy> group) {
         this.name = name;
         this.group = group;
     }
 
-    public void add(Enemy e) {
-        group.add(e);
+    public EnemiesGroup(String name) {
+        this.name = name;
+        group = new ArrayList<>();
     }
 
-    public void remove(Enemy e) {
-        group.remove(e);
+    public void add(Enemy e) {
+        group.add(e);
+        this.experience = this.experience + e.getExperience();
     }
+
 
 
     @Override
@@ -46,20 +54,26 @@ public class EnemiesGroup implements FightableGroup {
     @Override
     public float getCurrentHealth() {
         float health = 0;
-        removeKilled();
-        System.out.println(this.getName() + " consists of  " + group.size() + " members.");
-        System.out.println(Logger.BG_YELLOW + "                                     " + Logger.RESET);
         for (var e : group) {
-            System.out.println(e.getName() + " : " + e.getCurrentHealth() + ". ");
             health = health + e.getCurrentHealth();
         }
-        System.out.println(Logger.BG_YELLOW + "                                     " + Logger.RESET);
         return health;
     }
+
 
     @Override
     public String getName() {
         return name;
+    }
+
+    @Override
+    public int getMainAttribute() {
+        return 0;
+    }
+
+    @Override
+    public List<Ability> getAbilities() {
+        return null;
     }
 
 
@@ -88,10 +102,22 @@ public class EnemiesGroup implements FightableGroup {
 
     @Override
     public void removeKilled() {
-        for (var e : group) {
-            if (e.getCurrentHealth() <= 0) {
-                this.remove(e);
-            }
-        }
+        int i = 0;
+        group.removeIf(e -> e.getCurrentHealth() <= 0);
+    }
+
+    @Override
+    public boolean fight(FightablePlayer player, FightManager fightManager) {
+        return fightManager.fightPlayerVsGroup(player, this);
+    }
+
+    @Override
+    public int getExperience() {
+        return 0;
+    }
+
+    @Override
+    public float getHealth() {
+        return 0;
     }
 }

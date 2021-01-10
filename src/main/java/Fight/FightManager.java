@@ -2,6 +2,8 @@ package Fight;
 
 import Abilities.Ability;
 import Achievement.Achievement;
+import Enemy.EnemiesGroup;
+import Enemy.Enemy;
 import Logger.Logger;
 import Utils.IOUtils;
 
@@ -61,6 +63,21 @@ public class FightManager {
         return true;
     }
 
+    public boolean fightPlayerVsGroup(FightablePlayer player, FightableGroup enemy) {
+        while (true) {
+            if (playerKilledEnemy(player, enemy)) break;
+            float damageValue;
+            damageValue = instance.enemyGroupTurn(enemy);
+            damageValue = player.takeDamage(damageValue);
+            System.out.println("You lost " + damageValue + "hp.");
+            if (player.getCurrentHealth() <= 0) {
+                System.out.println("You lost!");
+                break;
+            }
+        }
+        return true;
+    }
+
 
     public float playerTurn(FightablePlayer player) {
         System.out.println("It's your turn " + Logger.BLUE + player.getName() + "." + Logger.RESET);
@@ -87,6 +104,19 @@ public class FightManager {
     public float enemyTurn(Fightable enemy) {
         System.out.println("It's enemy Turn " + Logger.BLUE + enemy.getName() + "." + Logger.RESET);
         System.out.println("Enemy current health: " + Logger.RED + enemy.getCurrentHealth() + "." + Logger.RESET);
+        return enemy.basicAttack();
+    }
+
+    public float enemyGroupTurn(FightableGroup enemy) {
+        enemy.removeKilled();
+        System.out.println("It's enemy Turn: " + Logger.BLUE + enemy.getName() + "." + Logger.RESET);
+        System.out.println(enemy.getName() + " consists of  " + enemy.getGroup().size() + " members.");
+        System.out.println(Logger.BG_YELLOW + "                                     " + Logger.RESET);
+        var enemiesAlive = enemy.getGroup();
+        for (Enemy e : enemiesAlive) {
+            System.out.println(e.getName() + " : " + e.getCurrentHealth() + ". ");
+        }
+        System.out.println(Logger.BG_YELLOW + "                                     " + Logger.RESET);
         return enemy.basicAttack();
     }
 

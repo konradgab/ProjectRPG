@@ -10,7 +10,7 @@ import java.util.List;
 public class WarriorBuilder implements Builder {
     PlayerWarrior product;
 
-    WarriorBuilder() {
+    public WarriorBuilder() {
         this.reset();
     }
 

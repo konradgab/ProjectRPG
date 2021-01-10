@@ -9,7 +9,9 @@ public interface Fightable {
 
     public float getCurrentHealth();
 
-    public float getCurrentMana();
+    default float getCurrentMana() {
+        return 0;
+    }
 
     public String getName();
 

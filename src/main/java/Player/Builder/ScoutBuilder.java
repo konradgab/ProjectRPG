@@ -10,7 +10,7 @@ import java.util.List;
 public class ScoutBuilder implements Builder {
     PlayerScout product;
 
-    ScoutBuilder(String name) {
+    public ScoutBuilder() {
         this.reset();
     }
 

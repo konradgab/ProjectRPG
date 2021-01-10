@@ -1,10 +1,11 @@
 package Fight;
 
-import Abilities.Ability;
+
+import Enemy.Enemy;
 
 import java.util.List;
 
-public interface FightableGroup {
+public interface FightableGroup extends FightableEnemy {
     public float takeDamage(float damage);
 
     public float takeDamage(float damage, boolean isAOE);
@@ -20,6 +21,8 @@ public interface FightableGroup {
     public void restore();
 
     public void removeKilled();
+
+    public List<Enemy> getGroup();
 
 
 }
