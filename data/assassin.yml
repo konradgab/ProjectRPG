@@ -1,0 +1,29 @@
+type: "assassin"
+name: "Maniac"
+level: 10
+experience: 500
+health: 300
+mana: 100
+armor: 0
+currentHealth: 30000
+currentMana: 100
+abilities :
+  - name: "Trinity force"
+    description: ""
+    cost: 0
+    multipliers:
+      - 2
+  - name: "Slim shady"
+    description: ""
+    cost: 0
+    multipliers:
+      - 1.75
+  - name: "Revenge"
+    description: ""
+    cost: 0
+    multipliers:
+      - 1.5
+dialogues :
+  - "In the name of the Order of the Black Knife, die."
+  - "NOTHING CAN'T STOP ME."
+  - "NO MERCY."

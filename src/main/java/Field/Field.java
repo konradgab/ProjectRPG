@@ -1,7 +1,9 @@
 package Field;
 
 import Actions.IAction;
+import Logger.Logger;
 import Player.Player;
+import Utils.FunctionUtils;
 import Utils.IOUtils;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Getter;
@@ -31,9 +33,16 @@ public class Field implements IField {
                 System.out.println(i + ". " + x.getInfo());
                 i++;
             }
+            System.out.println("0. Back.");
             System.out.println("Which mission would you like to try: ");
-            int choice = IOUtils.nextInt();
-            actions.get(choice - 1).execute(player);
+            int choice;
+            do {
+                choice = IOUtils.nextInt();
+                if(choice == 0) return 0;
+                if(FunctionUtils.checkRange(0, choice,actions.size())) {
+                    System.out.println(Logger.BG_GREEN + "Wrong choice." + Logger.RESET);
+                }
+            } while (!FunctionUtils.checkRange(0, choice ,actions.size()));
             return 0;
         }
         else {

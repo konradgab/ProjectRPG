@@ -7,6 +7,7 @@ import Player.Builder.Director;
 import Player.Builder.MageBuilder;
 import Player.*;
 import Game.*;
+import Utils.FunctionUtils;
 import Utils.IOUtils;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.core.type.TypeReference;
@@ -84,10 +85,15 @@ public class Board implements IBoard {
                     travel(direction);
                     player.getEventManager().notify("travel", this.getPlayer());
                     break;
-                case 3:
+                case 0:
                     System.exit(0);
             }
         }
+    }
+
+    public void createAssassin() {
+        var assassin = 
+
     }
 
     public int nextAction() {
@@ -96,10 +102,12 @@ public class Board implements IBoard {
         System.out.println("Possible actions: ");
         System.out.println("1. Search for missions.");
         System.out.println("2. Move to the next city.");
-        System.out.println("3. Exit");
+        System.out.println("0. Exit");
         System.out.print("What is your next move?(default: 2) ");
         int choice = IOUtils.nextInt();
-        System.out.println();
+        if (!FunctionUtils.checkRange(0, choice, 2)) {
+            return 2;
+        }
         return choice;
     }
 
@@ -112,8 +120,8 @@ public class Board implements IBoard {
         if (direction == 1) {
             player.setCurrentField(this.getFields().get((i + 1) % this.Fields.size()));
         } else {
-            if( i-1 % 10 >= 0)player.setCurrentField(this.getFields().get((i - 1) % this.Fields.size()));
-            else player.setCurrentField(this.getFields().get(this.Fields.size()-1));
+            if (i - 1 % 10 >= 0) player.setCurrentField(this.getFields().get((i - 1) % this.Fields.size()));
+            else player.setCurrentField(this.getFields().get(this.Fields.size() - 1));
         }
 
     }

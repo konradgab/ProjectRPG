@@ -1,21 +1,11 @@
 package Game;
 
-import Achievement.*;
 import Board.Board;
 import Config.Config;
-import Enemy.Boss;
-import Enemy.Monster;
-import Fight.FightManager;
-import Player.*;
-import Player.Builder.*;
 import Board.*;
 import Utils.IOUtils;
-import lombok.Getter;
-
-
 import java.io.File;
 import java.io.IOException;
-import java.util.Scanner;
 
 public class Game {
     private static Config config;
