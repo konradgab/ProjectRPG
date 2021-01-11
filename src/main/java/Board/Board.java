@@ -1,6 +1,7 @@
 package Board;
 
 import Achievement.Achievement;
+import Enemy.Assassin;
 import Field.Field;
 import Field.IField;
 import Player.Builder.Director;
@@ -30,11 +31,14 @@ public class Board implements IBoard {
     @JsonProperty
     private final Player player;
 
+    private final Assassin assassin;
+
     public Board() {
         loadLevel(Fields, "data/level-1-field-common.yml", "level-1-field-common.yml", Game.getConfig().getBoardSize());
         this.name = Game.getConfig().getLandName();
         this.player = createHero();
         player.setCurrentField(Fields.get(0));
+        assassin = createAssassin();
     }
 
 
@@ -91,9 +95,10 @@ public class Board implements IBoard {
         }
     }
 
-    public void createAssassin() {
-        var assassin = 
-
+    public Assassin createAssassin() {
+        var assassin = FunctionUtils.loadDefaultAssassin();
+        this.getPlayer().getEventManager().subscribe("travel", assassin);
+        return assassin;
     }
 
     public int nextAction() {

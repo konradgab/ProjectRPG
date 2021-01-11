@@ -26,7 +26,7 @@ public class Field implements IField {
     }
 
     @Override
-    public int displayActions(Player player) {
+    public void displayActions(Player player) {
         if (this.actions.size() != 0) {
             int i = 1;
             for (var x : actions) {
@@ -38,16 +38,15 @@ public class Field implements IField {
             int choice;
             do {
                 choice = IOUtils.nextInt();
-                if(choice == 0) return 0;
-                if(FunctionUtils.checkRange(0, choice,actions.size())) {
+                if(choice == 0) return;
+                if(!FunctionUtils.checkRange(0, choice ,actions.size())) {
                     System.out.println(Logger.BG_GREEN + "Wrong choice." + Logger.RESET);
                 }
             } while (!FunctionUtils.checkRange(0, choice ,actions.size()));
-            return 0;
+            this.getActions().get(choice-1).execute(player);
         }
         else {
             System.out.println("You have nothing to look for.");
         }
-        return 0;
     }
 }

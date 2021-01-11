@@ -4,12 +4,13 @@ import EventManager.PlayerEventListener;
 import Fight.FightManager;
 import Fight.FightableAssassin;
 import Fight.FightablePlayer;
+import Logger.Logger;
 import Player.Player;
 import lombok.AllArgsConstructor;
 
 import java.util.List;
-@AllArgsConstructor
 
+@AllArgsConstructor
 public class Assassin extends Enemy implements FightableAssassin, PlayerEventListener {
 
 
@@ -36,7 +37,7 @@ public class Assassin extends Enemy implements FightableAssassin, PlayerEventLis
 
     @Override
     public void restore() {
-
+        setCurrentHealth(this.getHealth());
     }
 
     @Override
@@ -47,8 +48,16 @@ public class Assassin extends Enemy implements FightableAssassin, PlayerEventLis
 
     @Override
     public void update(String eventType, Player player) {
-        if (player.getLevel() % 10 == 0) {
-            FightManager.startFight( player, this);
+        if (player.getLevel() % 5 == 0) {
+
+            System.out.println();
+            System.out.println(Logger.BG_YELLOW + "Somebody attacked you!!!" + Logger.RESET);
+            System.out.println();
+
+            if(FightManager.startFight( player, this)) {
+                this.setHealth(this.getHealth() + 100);
+                this.restore();
+            }
         }
     }
 

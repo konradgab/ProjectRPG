@@ -1,7 +1,5 @@
 package EventManager;
 
-
-import Fight.Fightable;
 import Player.Player;
 
 public interface PlayerEventListener {

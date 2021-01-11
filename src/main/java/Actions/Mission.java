@@ -17,6 +17,8 @@ public class Mission extends Action implements IAction{
     List<FightableEnemy> enemies;
     @JsonProperty
     int reward;
+    @JsonProperty
+    boolean isDone;
 
     @Override
     public boolean execute(Player player) {

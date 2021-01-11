@@ -49,7 +49,7 @@ public class FightManager {
 
     public boolean fightPlayerVsAssassin(FightablePlayer player, FightableAssassin enemy) {
         while (true) {
-            if (playerKilledEnemy(player, enemy)) break;
+            if (playerKilledEnemy(player, enemy)) return true;
             float damageValue;
             damageValue = instance.assassinTurn(enemy);
             damageValue = player.takeDamage(damageValue);
@@ -59,7 +59,7 @@ public class FightManager {
                 break;
             }
         }
-        return true;
+        return false;
     }
 
     public boolean fightPlayerVsGroup(FightablePlayer player, FightableGroup enemy) {

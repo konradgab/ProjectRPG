@@ -5,7 +5,7 @@ experience: 500
 health: 300
 mana: 100
 armor: 0
-currentHealth: 30000
+currentHealth: 300
 currentMana: 100
 abilities :
   - name: "Trinity force"
