@@ -15,7 +15,12 @@ public class Assassin extends Enemy implements FightableAssassin, PlayerEventLis
 
     @Override
     public float takeDamage(float damage) {
-        setCurrentHealth((float) (getCurrentHealth() - ((1 / (0.1 * getArmor())) * damage)));
+        var health = getCurrentHealth();
+        if (this.getArmor() >= 0) {
+            setCurrentHealth((float) (health - ((1 / (0.1 * (getArmor() + 1)) * damage))));
+        } else {
+            setCurrentHealth(health - damage);
+        }
         return (float) ((1 / (0.1 * getArmor())) * damage);
     }
 
@@ -49,6 +54,6 @@ public class Assassin extends Enemy implements FightableAssassin, PlayerEventLis
 
     @Override
     public boolean fight(FightablePlayer player, FightManager fightManager) {
-        return false;
+        return fightManager.fightPlayerVsAssassin(player, this);
     }
 }

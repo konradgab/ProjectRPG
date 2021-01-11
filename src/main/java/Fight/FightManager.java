@@ -2,7 +2,6 @@ package Fight;
 
 import Abilities.Ability;
 import Achievement.Achievement;
-import Enemy.EnemiesGroup;
 import Enemy.Enemy;
 import Logger.Logger;
 import Utils.IOUtils;
@@ -141,19 +140,19 @@ public class FightManager {
     public float assassinTurn(FightableAssassin assassin) {
         System.out.println("It's assassin turn:  " + Logger.BLUE + assassin.getName() + "." + Logger.RESET);
         System.out.println("assassin current health: " + Logger.RED + assassin.getCurrentHealth() + "." + Logger.RESET);
-        if (assassin.getCurrentHealth() < 0.9 * assassin.getCurrentHealth() && assassin.getCurrentHealth() > 0.75 * assassin.getCurrentHealth()) {
+        if (assassin.getCurrentHealth() < 0.9 * assassin.getHealth() && assassin.getHealth() > 0.75 * assassin.getHealth()) {
             //System.out.println("In the name of the Order of the Black Knife, die.");
             System.out.println(assassin.getDialoguesList().get(0));
             System.out.println(assassin.getName() + " used his ability : " + assassin.getAbilities().get(0).getName());
             return assassin.getAbilities().get(0).use(assassin.getCurrentHealth());
         }
-        if (assassin.getCurrentHealth() < 0.5 * assassin.getCurrentHealth() && assassin.getCurrentHealth() > 0.25 * assassin.getCurrentHealth()) {
+        if (assassin.getCurrentHealth() < 0.5 * assassin.getHealth() && assassin.getHealth() > 0.25 * assassin.getHealth()) {
             //System.out.println("NOTHING CAN STOP ME." );
             System.out.println(assassin.getDialoguesList().get(1));
             System.out.println(assassin.getName() + "used his ability : " + assassin.getAbilities().get(1).getName());
             return assassin.getAbilities().get(0).use(assassin.getCurrentHealth());
         }
-        if (assassin.getCurrentHealth() < 0.1 * assassin.getCurrentHealth()) {
+        if (assassin.getCurrentHealth() < 0.1 * assassin.getHealth()) {
             //System.out.println("NO MERCY." );
             System.out.println(assassin.getDialoguesList().get(2));
             System.out.println(assassin.getName() + "used his ability : " + assassin.getAbilities().get(2).getName());

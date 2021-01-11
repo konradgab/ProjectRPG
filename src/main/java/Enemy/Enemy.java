@@ -1,7 +1,6 @@
 package Enemy;
 
 import Abilities.Ability;
-import Field.Field;
 import Fight.FightableEnemy;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonSubTypes;

@@ -1,13 +1,10 @@
 package Enemy;
 
-import Abilities.Ability;
 import Fight.FightManager;
-import Fight.Fightable;
 import Fight.FightableEnemy;
 import Fight.FightablePlayer;
 import lombok.AllArgsConstructor;
 
-import java.util.List;
 @AllArgsConstructor
 public class Boss extends Enemy implements FightableEnemy {
 

@@ -2,10 +2,8 @@ package Enemy;
 
 import Abilities.Ability;
 import Fight.FightManager;
-import Fight.Fightable;
 import Fight.FightableEnemy;
 import Fight.FightablePlayer;
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
