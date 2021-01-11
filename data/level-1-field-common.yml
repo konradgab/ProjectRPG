@@ -108,3 +108,7 @@
                   - 1.5
             dialogues: [ ]
       reward: 10
+- type: "normal"
+  name: "End of the world"
+  description: "You see the dark."
+  actions: []

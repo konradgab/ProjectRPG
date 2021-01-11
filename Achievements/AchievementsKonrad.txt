@@ -37,3 +37,7 @@
 [2020-12-28]Player won fight against: Shade.
 [2020-12-28]Player created hero: Konrad
 [2020-12-28]Player created hero: Konrad
+[2021-01-11]Player created hero: Konrad
+[2021-01-11]Player created hero: Konrad
+[2021-01-11]Player created hero: Konrad
+[2021-01-11]Player created hero: Konrad

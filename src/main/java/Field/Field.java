@@ -1,13 +1,13 @@
 package Field;
 
 import Actions.IAction;
-import Actions.Mission;
 import Player.Player;
 import Utils.IOUtils;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Getter;
 
 import java.util.List;
+
 @Getter
 public class Field implements IField {
     @JsonProperty
@@ -25,14 +25,20 @@ public class Field implements IField {
 
     @Override
     public int displayActions(Player player) {
-        int i = 1;
-        for ( var x : actions) {
-            System.out.println(i + ". " + x.getInfo());
-            i++;
+        if (this.actions.size() != 0) {
+            int i = 1;
+            for (var x : actions) {
+                System.out.println(i + ". " + x.getInfo());
+                i++;
+            }
+            System.out.println("Which mission would you like to try: ");
+            int choice = IOUtils.nextInt();
+            actions.get(choice - 1).execute(player);
+            return 0;
         }
-        System.out.println("Which mission would you like to try: ");
-        int choice = IOUtils.nextInt();
-        actions.get(choice-1).execute(player);
+        else {
+            System.out.println("You have nothing to look for.");
+        }
         return 0;
     }
 }

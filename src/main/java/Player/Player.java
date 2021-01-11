@@ -114,6 +114,7 @@ public abstract class Player implements FightablePlayer {
     }
 
     public void move (IField newField) {
+        eventManager.notify("travel", this);
         this.setCurrentField(newField);
     }
 

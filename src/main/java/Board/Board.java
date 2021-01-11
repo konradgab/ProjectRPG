@@ -10,6 +10,7 @@ import Game.*;
 import Utils.IOUtils;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.core.type.TypeReference;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 
 import java.io.File;
@@ -18,14 +19,15 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+@AllArgsConstructor
 @Getter
 public class Board implements IBoard {
     @JsonProperty
-    private String name;
+    private final String name;
     @JsonProperty
     public final List<IField> Fields = new ArrayList<>();
     @JsonProperty
-    private Player player;
+    private final Player player;
 
     public Board() {
         loadLevel(Fields, "data/level-1-field-common.yml", "level-1-field-common.yml", Game.getConfig().getBoardSize());
@@ -34,13 +36,14 @@ public class Board implements IBoard {
         player.setCurrentField(Fields.get(0));
     }
 
+
     private void loadLevel(List<IField> levelList, String levelFileName, String resource, int size) {
         File levelFile = IOUtils.openFile(levelFileName, resource);
         try {
             List<Field> gameFields = IOUtils.getMapper().readValue(levelFile, new TypeReference<>() {
             });
-            if(gameFields.size() < size - 1){
-                Logger.Logger.printError("Expected "+(size-1)+" fields but defined in "+levelFileName+" only "+gameFields.size()+".");
+            if (gameFields.size() < size - 1) {
+                Logger.Logger.printError("Expected " + (size - 1) + " fields but defined in " + levelFileName + " only " + gameFields.size() + ".");
                 System.exit(1);
             }
 
@@ -62,11 +65,6 @@ public class Board implements IBoard {
         mage.setName(name);
         Achievement.getInstance().message("Player created hero: " + name, mage.getName());
         return mage;
-    }
-
-    @Override
-    public void startGame() {
-
     }
 
     public List<IField> getFields() {
@@ -107,14 +105,15 @@ public class Board implements IBoard {
 
     public void travel(int direction) {
         int i = 0;
-        for(var field : getFields()) {
-            if(field.equals(player.getCurrentField())) break;
+        for (var field : getFields()) {
+            if (field.equals(player.getCurrentField())) break;
             else i++;
         }
-        if(direction == 1) {
-            player.setCurrentField(this.getFields().get((i + 1) % 10));
+        if (direction == 1) {
+            player.setCurrentField(this.getFields().get((i + 1) % this.Fields.size()));
         } else {
-            player.setCurrentField(this.getFields().get((i - 1) % 10));
+            if( i-1 % 10 >= 0)player.setCurrentField(this.getFields().get((i - 1) % this.Fields.size()));
+            else player.setCurrentField(this.getFields().get(this.Fields.size()-1));
         }
 
     }
@@ -124,13 +123,4 @@ public class Board implements IBoard {
         return null;
     }
 
-    @Override
-    public void save() {
-
-    }
-
-    @Override
-    public void gameFinish() {
-
-    }
 }
