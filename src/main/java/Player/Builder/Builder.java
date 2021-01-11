@@ -1,7 +1,6 @@
 package Player.Builder;
 
 import Abilities.Ability;
-import Player.Player;
 
 import java.util.List;
 

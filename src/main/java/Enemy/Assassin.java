@@ -1,9 +1,7 @@
 package Enemy;
 
-import Abilities.Ability;
 import EventManager.PlayerEventListener;
 import Fight.FightManager;
-import Fight.Fightable;
 import Fight.FightableAssassin;
 import Fight.FightablePlayer;
 import Player.Player;

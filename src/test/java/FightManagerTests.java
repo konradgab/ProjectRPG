@@ -53,7 +53,7 @@ public class FightManagerTests {
     }
 
 
-    public void TestFightAgainstMonster() {
+    public void FightAgainstMonsterTest() {
         var testPlayer = createTestMage();
         testPlayer.setName("test");
         var testMonster = loadMonster();
@@ -62,7 +62,7 @@ public class FightManagerTests {
         FightManager.startFight(testPlayer, testMonster);
     }
 
-    public void TestFightAgainstGroupMonsters() {
+    public void FightAgainstGroupMonstersTest() {
         var testPlayer = createTestMage();
         testPlayer.setName("test");
         var testMonster1 = loadMonster();
@@ -80,9 +80,29 @@ public class FightManagerTests {
         FightManager.startFight(testPlayer, testEnemiesGroup);
     }
 
+    public void FightAgainstAssassinTest() {
+        var testPlayer = createTestMage();
+        testPlayer.setName("test");
+        var testMonster1 = loadMonster();
+        var testMonster2 = loadMonster();
+        var testMonster3 = loadMonster();
+        var testMonster4 = loadMonster();
+        var testMonster5 = loadMonster();
+        EnemiesGroup testEnemiesGroup = new EnemiesGroup("TestGroup");
+        testEnemiesGroup.add(testMonster1);
+        testEnemiesGroup.add(testMonster2);
+        testEnemiesGroup.add(testMonster3);
+        testEnemiesGroup.add(testMonster4);
+        testEnemiesGroup.add(testMonster5);
+        assertNotNull(testPlayer);
+        FightManager.startFight(testPlayer, testEnemiesGroup);
+    }
+
+
+
     public static void main(String[] args) {
         var test = new FightManagerTests();
-        test.TestFightAgainstGroupMonsters();
+        test.FightAgainstGroupMonstersTest();
 
     }
 
