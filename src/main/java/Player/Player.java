@@ -2,9 +2,7 @@ package Player;
 
 import Abilities.Ability;
 import EventManager.PlayerEventManager;
-import Field.Field;
 import Field.IField;
-import Fight.Fightable;
 import Fight.FightablePlayer;
 import Utils.IOUtils;
 import lombok.Getter;
@@ -113,6 +111,10 @@ public abstract class Player implements FightablePlayer {
     public float useAbility(int abilityNumber) {
         this.setCurrentMana((float) (this.getCurrentMana() - this.getAbilities().get(abilityNumber).getCost()));
         return this.getAbilities().get(abilityNumber).use(this.getMainAttribute());
+    }
+
+    public void move (IField newField) {
+        this.setCurrentField(newField);
     }
 
 
