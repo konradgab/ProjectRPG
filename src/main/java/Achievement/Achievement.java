@@ -33,7 +33,6 @@ public class Achievement {
 
 
         DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
-        Calendar cal = Calendar.getInstance();
 
         File achievement = new File("Achievements" +  File.separator + "Achievements" + name +".txt");
         if(!achievement.exists()){
