@@ -49,7 +49,6 @@ public class Assassin extends Enemy implements FightableAssassin, PlayerEventLis
     @Override
     public void update(String eventType, Player player) {
         if (player.getLevel() % 5 == 0) {
-
             System.out.println();
             System.out.println(Logger.BG_YELLOW + "Somebody attacked you!!!" + Logger.RESET);
             System.out.println();
