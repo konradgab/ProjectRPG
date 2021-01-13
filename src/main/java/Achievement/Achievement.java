@@ -15,8 +15,6 @@ public class Achievement {
     private Achievement() {
     }
 
-    ;
-
     public static synchronized Achievement getInstance() {
         if (instance == null) {
             instance = new Achievement();
